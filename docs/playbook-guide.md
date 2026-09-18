@@ -242,65 +242,42 @@ can't, keep talking to the planning AI until you can.
 
 ---
 
-## Step 3: Create Your Project and Install Tools
+## Step 3: Clone the Playbook and Initialize Your Project
 
-### 3a. Scaffold your project
+Instead of manually installing skills, copying templates from zip files, and renaming files, everything is pre-packaged in the **AI Developer Playbook** repository.
+
+### 3a. Clone the repository
 
 ```bash
-# Example with Next.js
-npx -y create-next-app@latest my-project
+git clone https://github.com/rajairfanahmed/ai-developer-playbook.git my-project
 cd my-project
 ```
 
-### 3b. Install JS Mastery Engineering Skills
+### 3b. Re-initialize Git for your new project
 
-These are slash-command skills (`/scope`, `/architect`, `/develop`,
-etc.) that automate each phase of the build. They work on any
-Agent Skills client.
+Disconnect from the playbook template origin so you can push to your own project repo:
 
 ```bash
-# For Cursor
-npx skills@latest add jsmastery-pro/skills -a cursor
+# On Mac/Linux:
+rm -rf .git && git init
 
-# For Claude Code
-npx skills@latest add jsmastery-pro/skills -a claude-code
-
-# For other agents (Codex, Gemini CLI, etc.)
-npx skills@latest add jsmastery-pro/skills
+# On Windows (PowerShell):
+Remove-Item -Recurse -Force .git; git init
 ```
 
-Commit the installed skills folder to share the workflow with
-your team. Each skill's instructions live in its `SKILL.md`.
+### 3c. What is already set up out of the box
 
-### 3c. Copy the nine-file templates into your project
+You don't need to run extra installation commands. Your project already includes:
+- **Pre-installed Workflow Skills:** All 9 skills (`/scope`, `/architect`, `/develop`, `/check`, `/test`, `/document`, `/sync`, `/audit`, `/debug`) in `skills/`, `.agents/skills/`, and `.claude/skills/`.
+- **Pre-configured Entry Points:** `AGENT.md` and `AGENTS.md` are wired to load context in order and route personas.
+- **Context & Spec Templates:** All 9 context templates in `context/` plus starter specs in `context/specs/`.
+- **Skill Output Directories:** `docs/scope/`, `docs/specs/`, and `docs/reviews/` ready for agent output.
 
-Copy `CLAUDE.md` and the entire `context/` folder from this
-download into your project root:
+### 3d. Add or scaffold your tech stack
 
-```
-your-project/
-├── .cursorrules              ← CLAUDE.md renamed for your tool
-├── context/
-│   ├── project-overview.md
-│   ├── architecture.md
-│   ├── ui-context.md
-│   ├── code-standards.md
-│   ├── ai-workflow-rules.md
-│   ├── progress-tracker.md
-│   ├── frontend-prompt.md
-│   ├── backend-prompt.md
-│   └── fullstack-prompt.md
-└── ... your source code
-```
+Initialize your chosen stack's source code (e.g., `src/`, `app/`, `package.json`) alongside the context and skills folders.
 
-### 3d. Rename the entry point file
-
-Rename `CLAUDE.md` to match your AI tool (see the table in the
-introduction). This file tells the agent to read all context
-files and route tasks to the right expert persona.
-
-**✅ You're done with Step 3 when** your project is scaffolded,
-skills are installed, and all 9 template files are in your project.
+**✅ You're done with Step 3 when** your repository is cloned, initialized with git, and ready for context building.
 
 ---
 
