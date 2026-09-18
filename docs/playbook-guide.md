@@ -48,23 +48,30 @@ need the willingness to think before you build.
 
 ### What's included
 
-```
-📁 ai-builders-playbook/
-├── README.md                         ← This guide
-├── CLAUDE.md                         ← Entry point template
-│                                       (rename to .cursorrules,
-│                                        AGENTS.md, etc.)
-└── context/
-    ├── project-overview.md           ← Blank template
-    ├── architecture.md               ← Blank template
-    ├── ui-context.md                 ← Blank template
-    ├── code-standards.md             ← Blank template
-    ├── ai-workflow-rules.md          ← Blank template
-    ├── progress-tracker.md           ← Blank template
-    ├── frontend-prompt.md            ← Persona template
-    ├── backend-prompt.md             ← Persona template
-    └── fullstack-prompt.md           ← Persona template
-```
+your-project/
+├── .cursorrules                      ← Entry point (reads everything)
+├── context/
+│   ├── project-overview.md           ← What you're building
+│   ├── architecture.md               ← Tech stack + rules
+│   ├── ui-context.md                 ← Colors, fonts, design tokens
+│   ├── code-standards.md             ← Coding rules
+│   ├── ai-workflow-rules.md          ← AI behavior rules
+│   ├── progress-tracker.md           ← Current state of the build
+│   ├── frontend-prompt.md            ← Frontend expert persona
+│   ├── backend-prompt.md             ← Backend expert persona
+│   ├── fullstack-prompt.md           ← Fullstack expert persona
+│   └── specs/
+│       ├── 00-build-plan.md          ← Ordered list of all units
+│       ├── 01-auth-setup.md          ← Feature spec
+│       ├── 02-database-schema.md     ← Feature spec
+│       └── ...                       ← One spec per feature
+├── docs/
+│   ├── scope/                        ← Created by /scope
+│   ├── specs/                        ← Created by /architect
+│   └── reviews/                      ← Created by /check
+├── AGENTS.md                         ← Created by /audit
+└── ... your source code (src/, app/, etc.)
+
 
 Each template includes the full structure and section headings
 with instructions for what to put in each section. Fill them in
