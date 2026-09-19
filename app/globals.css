@@ -1,48 +1,53 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  --color-bg-base: var(--bg-base);
-  --color-bg-surface: var(--bg-surface);
-  --color-text-primary: var(--text-primary);
-  --color-text-muted: var(--text-muted);
-  --color-accent-primary: var(--accent-primary);
-  --color-accent-muted: var(--accent-muted);
-  --color-border-default: var(--border-default);
-  --color-state-error: var(--state-error);
-  --color-state-success: var(--state-success);
-}
-
 :root {
-  --bg-base: #FAFAFA;
-  --bg-surface: #FFFFFF;
-  --text-primary: #09090B;
-  --text-muted: #71717A;
-  --accent-primary: #6366F1;
-  --accent-muted: #E0E7FF;
-  --border-default: #E4E4E7;
-  --state-error: #EF4444;
-  --state-success: #22C55E;
+  --bg-base: #fafafa;
+  --bg-surface: #ffffff;
+  --text-primary: #09090b;
+  --text-muted: #71717a;
+  --accent-primary: #6366f1;
+  --accent-muted: #e0e7ff;
+  --border-default: #e4e4e7;
+  --state-error: #ef4444;
+  --state-success: #22c55e;
 }
 
 .dark {
-  --bg-base: #09090B;
-  --bg-surface: #18181B;
-  --text-primary: #FAFAFA;
-  --text-muted: #A1A1AA;
-  --accent-primary: #7C3AED;
-  --accent-muted: #312E81;
-  --border-default: #27272A;
-  --state-error: #F87171;
-  --state-success: #4ADE80;
+  --bg-base: #09090b;
+  --bg-surface: #18181b;
+  --text-primary: #fafafa;
+  --text-muted: #a1a1aa;
+  --accent-primary: #7c3aed;
+  --accent-muted: #312e81;
+  --border-default: #27272a;
+  --state-error: #f87171;
+  --state-success: #4ade80;
+}
+
+@theme inline {
+  --color-base: var(--bg-base);
+  --color-surface: var(--bg-surface);
+  --color-primary: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-muted: var(--accent-muted);
+  --color-default: var(--border-default);
+  --color-error: var(--state-error);
+  --color-success: var(--state-success);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg-base);
+  background: var(--bg-base);
   color: var(--text-primary);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
 }

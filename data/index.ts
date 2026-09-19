@@ -1,113 +1,115 @@
 export interface Project {
-  id: string;
   title: string;
-  problemStatement: string;
-  techTags: string[];
+  problem: string;
+  tags: string[];
   githubUrl: string;
-  liveDemoUrl: string;
-  imageUrl: string;
-  isFlagship?: boolean;
+  demoUrl: string;
+  imageSrc: string;
+  isFlagship: boolean;
 }
 
-export interface SocialLinks {
+export interface ExperienceItem {
+  title: string;
+  org: string;
+  dates: string;
+  summary: string;
+}
+
+export interface EducationItem {
+  title: string;
+  org: string;
+  dates: string;
+}
+
+export interface SiteContent {
+  name: string;
+  positioning: string;
+  bio: string;
+  skills: string[];
+  projects: Project[];
+  experience: ExperienceItem[];
+  education: EducationItem[];
   email: string;
-  linkedin: string;
-  github: string;
-  devCommunity: string;
-  cv: string;
+  linkedinUrl: string;
+  githubUrl: string;
+  devtoUrl: string;
+  cvUrl: string;
 }
 
-export interface Education {
-  degree: string;
-  institution: string;
-  year: string;
-}
-
-export interface Experience {
-  role: string;
-  company: string;
-  year: string;
-  description: string;
-}
-
-export const bio = {
+export const site: SiteContent = {
   name: "Raja Irfan Ahmed",
-  positioningStatement: "Full Stack AI Web Apps Developer",
-  profilePhotoUrl: "https://github.com/rajairfanahmed.png", // GitHub avatar as placeholder
-};
-
-export const skills: string[] = [
-  "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
-  "React",
-  "Framer Motion",
-  "Node.js",
-  "PostgreSQL",
-  "AI Integrations"
-];
-
-export const socialLinks: SocialLinks = {
+  positioning: "Full Stack AI Web Apps Developer",
+  // Placeholder until Raja replaces this bio.
+  bio: "I build full stack AI web apps with a focus on speed, clear architecture, and recruiter-ready proof of work.",
+  // Placeholder skill list until Raja replaces it.
+  skills: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "AI integrations",
+  ],
+  // Placeholder projects until Raja replaces them. imageSrc files land in later jobs.
+  projects: [
+    {
+      title: "AI Agent Workflow Engine",
+      problem: "Automates multi-step reasoning tasks for product teams.",
+      tags: ["Next.js", "TypeScript", "LangChain", "OpenAI"],
+      githubUrl: "https://github.com/rajairfanahmed",
+      demoUrl: "https://rajairfanahmed.vercel.app/",
+      imageSrc: "/projects/workflow-engine.png",
+      isFlagship: true,
+    },
+    {
+      title: "Dev Community Platform",
+      problem: "A fast community surface with realtime discussion threads.",
+      tags: ["React", "Firebase", "Tailwind CSS"],
+      githubUrl: "https://github.com/rajairfanahmed",
+      demoUrl: "https://rajairfanahmed.vercel.app/",
+      imageSrc: "/projects/dev-community.png",
+      isFlagship: false,
+    },
+    {
+      title: "Store Analytics Console",
+      problem: "Gives store owners a high-signal view of orders and revenue.",
+      tags: ["Next.js", "PostgreSQL", "Prisma"],
+      githubUrl: "https://github.com/rajairfanahmed",
+      demoUrl: "https://rajairfanahmed.vercel.app/",
+      imageSrc: "/projects/store-analytics.png",
+      isFlagship: false,
+    },
+    {
+      title: "Portfolio Kit",
+      problem: "A static bento-grid kit for developer portfolios.",
+      tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      githubUrl: "https://github.com/rajairfanahmed",
+      demoUrl: "https://rajairfanahmed.vercel.app/",
+      imageSrc: "/projects/portfolio-kit.png",
+      isFlagship: false,
+    },
+  ],
+  // Placeholder experience until Raja replaces it.
+  experience: [
+    {
+      title: "Full Stack Developer",
+      org: "Independent projects",
+      dates: "2025 — Present",
+      summary: "Building full stack AI web apps and shipping public demos.",
+    },
+  ],
+  education: [
+    {
+      title: "BSCS",
+      org: "National University of Modern Languages, Islamabad",
+      dates: "2026",
+    },
+  ],
   email: "rajairfana551@gmail.com",
-  linkedin: "https://www.linkedin.com/in/rajairfanahmed/",
-  github: "https://github.com/rajairfanahmed",
-  devCommunity: "https://dev.to/rajairfanahmed",
-  cv: "https://drive.google.com/file/d/1CRblzPL3j8W6mv06d6FzW-zujSwqs9tN/view?usp=drive_link"
+  linkedinUrl: "https://www.linkedin.com/in/rajairfanahmed/",
+  githubUrl: "https://github.com/rajairfanahmed",
+  devtoUrl: "https://dev.to/rajairfanahmed",
+  cvUrl:
+    "https://drive.google.com/file/d/1CRblzPL3j8W6mv06d6FzW-zujSwqs9tN/view?usp=drive_link",
 };
-
-export const education: Education[] = [
-  {
-    degree: "BSCS",
-    institution: "National University of Modern Languages, Islamabad",
-    year: "2026"
-  }
-];
-
-export const experience: Experience[] = [
-  {
-    role: "Full Stack Developer",
-    company: "Placeholder Company",
-    year: "2025 - Present",
-    description: "Placeholder description for current role."
-  }
-];
-
-export const projects: Project[] = [
-  {
-    id: "flagship-project",
-    title: "AI Agent Workflow Engine",
-    problemStatement: "Automates complex multi-step reasoning tasks for enterprise teams.",
-    techTags: ["Next.js", "TypeScript", "LangChain", "OpenAI"],
-    githubUrl: "https://github.com/rajairfanahmed",
-    liveDemoUrl: "https://example.com",
-    imageUrl: "/projects/flagship.jpg", // To be placed in public/projects/
-    isFlagship: true
-  },
-  {
-    id: "project-2",
-    title: "Dev Community Platform",
-    problemStatement: "A fast, static community platform with realtime features.",
-    techTags: ["React", "Firebase", "Tailwind CSS"],
-    githubUrl: "https://github.com/rajairfanahmed",
-    liveDemoUrl: "https://example.com",
-    imageUrl: "/projects/project2.jpg"
-  },
-  {
-    id: "project-3",
-    title: "E-Commerce Dashboard",
-    problemStatement: "High-performance analytics dashboard for store owners.",
-    techTags: ["Next.js", "PostgreSQL", "Prisma"],
-    githubUrl: "https://github.com/rajairfanahmed",
-    liveDemoUrl: "https://example.com",
-    imageUrl: "/projects/project3.jpg"
-  },
-  {
-    id: "project-4",
-    title: "Portfolio Template",
-    problemStatement: "Minimalist bento-grid developer portfolio.",
-    techTags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/rajairfanahmed",
-    liveDemoUrl: "https://example.com",
-    imageUrl: "/projects/project4.jpg"
-  }
-];
