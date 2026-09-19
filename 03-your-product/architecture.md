@@ -14,18 +14,22 @@
 
 | Layer | Technology | Role |
 | --- | --- | --- |
-| Framework | Next.js (App Router) | Pages, routing, static output for Vercel |
-| Language | TypeScript | Types for components and the `data/` layer |
-| UI | Tailwind CSS | Utilities and theme tokens |
-| Typography | Geist Sans + Geist Mono (`geist` package, local files) | UI type and technical metadata |
-| Theming | next-themes | Dark/light with no flash on first paint |
-| Animation | Framer Motion | Load, scroll, and hover motion |
-| Images | next/image | Optimized images, priority hero photo |
-| Metadata | @vercel/og | Build-time Open Graph image |
+| Framework | Next.js 15.5.25 (App Router) | Pages, routing, static output for Vercel |
+| Language | TypeScript 5.9.3 (strict) | Types for components and the `data/` layer |
+| UI runtime | React 19.3.0 | UI |
+| UI / styling | Tailwind CSS 4.3.3 via `@tailwindcss/postcss` 4.3.3 | Utilities and theme tokens in `app/globals.css` (`@theme inline`). No `tailwind.config.ts` |
+| Typography | Geist Sans + Geist Mono (`geist` 1.5.1, local files) | `--font-geist-sans` / `--font-geist-mono` mapped to `--font-sans` / `--font-mono` |
+| Icons | lucide-react 0.544.0 | Installed. Not used in the job 01 scaffold page |
+| Lint | ESLint 9.39.5 + eslint-config-next 15.5.25 | `npm run lint` runs `eslint`. Ignores `.next/`, `node_modules/`, `out/`, `next-env.d.ts` |
+| Theming | next-themes | Not installed. Job `02-theme-and-layout` |
+| Animation | Framer Motion | Not installed. Job `07-motion-and-interactions` |
+| Images | next/image | No images in the tree yet. Job `03` and `05` add files under `public/` |
+| Metadata | @vercel/og | Not installed. Job `08-seo-and-metadata` |
 | Auth | None | Public site, no sessions |
 | Database | None | No database in any environment |
-| Contact | `mailto:` | Client-side email only |
+| Contact | `mailto:` | Client-side email only. Not rendered until job `06` |
 | Host | Vercel | Static deploy and CDN |
+| Package name | `rajairfanahmed-portfolio` | `package.json` |
 
 ## Host
 
@@ -34,15 +38,18 @@
 - GitHub: https://github.com/rajairfanahmed/portfolio
 - Build command: `npm run build`
 - Dev command: `npm run dev`
+- Start command: `npm run start`
+- Lint command: `npm run lint`
 - Env names (not values): none. This static site does not read secrets.
 
 ## System Boundaries
 
-- `app/` — Routes, root layout, page composition, metadata (`opengraph-image.tsx`, favicon, SEO exports).
-- `components/` — Presentational UI (sections, cards, theme toggle). No site copy lives here.
-- `data/` — Typed constants: bio, skills, projects, experience, links, CV URL. Single content source.
-- `lib/` — Shared helpers (motion variants, theme helpers). No UI, no content.
-- `public/` — Profile photo, project screenshots, favicon source.
+- `app/` — Exists. `layout.tsx`, `page.tsx`, `globals.css` only. No `app/api`, no `opengraph-image.tsx`, no `favicon.ico`.
+- `data/` — Exists. `index.ts` is the typed content source (`site: SiteContent`).
+- `components/` — Does not exist yet. Reserved for section UI starting job `02`.
+- `lib/` — Does not exist yet. Reserved for motion/theme helpers.
+- `public/` — Does not exist yet. Reserved for profile photo and project screenshots.
+- No `src/` directory. Import alias `@/*` maps to the repo root.
 
 ## Storage Model
 

@@ -21,7 +21,7 @@
 3. Install only what this job needs: Next.js, React, TypeScript, Tailwind, `lucide-react`, and Geist (via `next/font` or the `geist` package). Do not install `next-themes`, `framer-motion`, or `@vercel/og`.
 4. Enable TypeScript strict mode. Do not weaken it.
 5. In global CSS, define the semantic variables from `03-your-product/ui-context.md` (`--bg-base`, `--bg-surface`, `--text-primary`, `--text-muted`, `--accent-primary`, `--accent-muted`, `--border-default`, `--state-error`, `--state-success`) for light on `:root` and dark on `.dark`. Map them to Tailwind utilities (`bg-base`, `text-primary`, and the rest). No hex in later components.
-6. Wire Geist Sans to `--font-sans` and Geist Mono to `--font-mono` on the root layout.
+6. Wire Geist via the `geist` package (`GeistSans`, `GeistMono`). Map `--font-geist-sans` / `--font-geist-mono` to Tailwind `--font-sans` / `--font-mono` in `app/globals.css`. Do not use `next/font/google` (this machine cannot fetch Google Fonts).
 7. Create `data/` with shared interfaces and exported constants. Define each shape once:
    - `Project`: `title`, `problem`, `tags` (`string[]`), `githubUrl`, `demoUrl`, `imageSrc`, `isFlagship`
    - `ExperienceItem`: `title`, `org`, `dates`, `summary`
@@ -44,12 +44,12 @@
 
 # Verify when done
 
-- [ ] https://rajairfanahmed.vercel.app/ loads the new scaffold, not the old portfolio (no old Hero, project bento, or "Say Hello")
-- [ ] Page background and text match the light tokens (`--bg-base` `#FAFAFA`, `--text-primary` `#09090B`)
-- [ ] Body type is Geist Sans
-- [ ] Visible text includes the name from `data/` (`Raja Irfan Ahmed`), not a hardcoded string in `app/page.tsx`
-- [ ] No theme toggle, no project cards, no mailto button, no contact form
-- [ ] View source / network: no `/api` routes and no auth
-- [ ] `npm run build` passes
-- [ ] UX floor that applies: no long list on this page; if `data.projects` is empty later, this job still does not render a grid. No new form. Tokens only from `03-your-product/ui-context.md`
-- [ ] API floor that applies: no list endpoint; no secrets in the repo; build command is `npm run build`
+- [x] https://rajairfanahmed.vercel.app/ loads the new scaffold, not the old portfolio (no old Hero, project bento, or "Say Hello")
+- [x] Page background and text match the light tokens (`--bg-base` `#FAFAFA`, `--text-primary` `#09090B`)
+- [x] Body type is Geist Sans
+- [x] Visible text includes the name from `data/` (`Raja Irfan Ahmed`), not a hardcoded string in `app/page.tsx`
+- [x] No theme toggle, no project cards, no mailto button, no contact form
+- [x] View source / network: no `/api` routes and no auth
+- [x] `npm run build` passes
+- [x] UX floor that applies: no long list on this page; if `data.projects` is empty later, this job still does not render a grid. No new form. Tokens only from `03-your-product/ui-context.md`
+- [x] API floor that applies: no list endpoint; no secrets in the repo; build command is `npm run build`

@@ -7,7 +7,7 @@
 - Goal: Next.js app exists with TypeScript, Tailwind tokens, Geist fonts, `lucide-react`, and a typed `data/` folder holding bio, skills, placeholder projects, placeholder experience, and contact links.
 - Recipe: `03-your-product/01-project-setup.md`
 - Dependencies: None
-- Status: Pending
+- Status: Done
 
 ### 02-theme-and-layout
 

@@ -12,7 +12,7 @@
 ## Language
 
 - TypeScript strict mode stays on. Do not weaken `tsconfig.json`.
-- Use `interface` for component props and data shapes (`Project`, `SkillTag`, `ExperienceItem`).
+- Use `interface` for component props and data shapes (`Project`, `ExperienceItem`, `EducationItem`, `SiteContent`). Skills are `string[]` on `SiteContent`, not a `SkillTag` type.
 - Use `type` for unions, intersections, and utility compositions.
 - Do not use `any`. Use `unknown` and narrow before use.
 - Define each shared data shape once in `data/` and import it. Do not duplicate the shape.
@@ -52,8 +52,9 @@
 
 ## File Organization
 
-- `app/` — routes, layouts, metadata. Composition only.
-- `components/` — UI sections and controls. No content constants.
-- `data/` — typed content and shared interfaces.
-- `lib/` — motion variants and small pure helpers.
-- `public/` — profile photo, project screenshots, favicon source.
+- `app/` — routes, layouts, `globals.css`. Today: `layout.tsx` and `page.tsx` only. Composition only.
+- `data/` — typed content and shared interfaces in `data/index.ts`. Export `site`.
+- `components/` — not in the tree yet. When added, UI sections and controls only. No content constants.
+- `lib/` — not in the tree yet. When added, motion variants and small pure helpers.
+- `public/` — not in the tree yet. When added, profile photo, project screenshots, favicon source.
+- Tailwind tokens live in `app/globals.css`. Do not add `tailwind.config.ts` unless the stack in `03-your-product/architecture.md` changes.

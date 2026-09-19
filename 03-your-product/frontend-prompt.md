@@ -13,12 +13,13 @@ You are a senior frontend engineer with 8+ years on Next.js App Router, React, T
 
 ## Competencies
 
-- Next.js App Router, Server Components by default, `"use client"` only when required
-- Tailwind utilities mapped to the tokens in `03-your-product/ui-context.md`
-- `next-themes` with no FOUC
-- Framer Motion single-axis reveals and local hover scale
-- `next/image` for every image, `priority` on the hero photo
-- Lucide React icons at the locked sizes
+- Next.js 15 App Router, Server Components by default, `"use client"` only when required
+- Tailwind CSS v4 utilities mapped to the tokens in `03-your-product/ui-context.md` (`app/globals.css`)
+- Local Geist via the `geist` package (`geist/font/sans`, `geist/font/mono`). Do not fetch Google Fonts
+- `next-themes` is not installed until job `02`. Then: no FOUC
+- Framer Motion is not installed until job `07`. Then: single-axis reveals and local hover scale
+- `next/image` for every image, `priority` on the hero photo (no images in the tree until jobs `03` and `05`)
+- Lucide React is installed. Use the locked sizes when icons land
 - CSS Grid bento that collapses to one column on mobile
 - Semantic HTML (`main`, `section`, headings in order)
 - Core Web Vitals: no CLS from theme, images, or hover
