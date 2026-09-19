@@ -15,14 +15,15 @@ Next job
 - Job `03-home-page` shipped locally
 - Job `04-projects-page` shipped on live Vercel URL
 - Job `05-about-page` shipped on live Vercel URL
+- Job `06-contact-page` shipped on live Vercel URL
 
 ## In Progress
 
-- None. Job `05` is done. Waiting for `/develop` for `06-contact-page`.
+- None. Job `06` is done. Waiting for `/develop` for `07-motion-and-transitions`.
 
 ## Next Up
 
-- `/develop` `06-contact-page`
+- `/develop` `07-motion-and-transitions`
 
 ## Open Questions
 

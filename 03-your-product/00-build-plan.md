@@ -42,7 +42,7 @@
 - Goal: `/contact` is a distraction-free conversion page: large header, darkspace, and direct `mailto:`, Google Drive CV, LinkedIn, GitHub, and dev.to from `data/`.
 - Recipe: `03-your-product/06-contact-page.md`
 - Dependencies: `03-home-page`
-- Status: Pending
+- Status: Done
 
 ### 07-motion-and-transitions
 
