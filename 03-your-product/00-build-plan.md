@@ -28,7 +28,7 @@
 - Goal: `/projects` shows the featured cards in a high-density asymmetric grid with dark-mode mockups, hover scale inside the card, glowing border, tech badges, GitHub, and live demo links from `data/`.
 - Recipe: `03-your-product/04-projects-page.md`
 - Dependencies: `03-home-page`
-- Status: Pending
+- Status: Done
 
 ### 05-about-page
 

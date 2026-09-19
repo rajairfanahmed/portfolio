@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#141414" />
+  <rect width="780" height="580" x="10" y="10" fill="none" stroke="#262626" stroke-width="2" rx="24" />
+  <circle cx="400" cy="300" r="100" fill="#1A1A1A" stroke="#262626" stroke-width="4" />
+  <text x="400" y="320" font-family="sans-serif" font-size="48" font-weight="bold" fill="#3F3F46" text-anchor="middle">Portfolio</text>
+  <text x="400" y="530" font-family="sans-serif" font-size="18" fill="#3F3F46" text-anchor="middle">Placeholder image — replace in public/projects/</text>
+</svg>

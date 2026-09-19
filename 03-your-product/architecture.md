@@ -14,13 +14,13 @@
 
 | Layer | Technology | Role |
 | --- | --- | --- |
-| Framework | Next.js 15.5.25 (App Router) | Four static routes, layout chrome, Vercel output |
-| Language | TypeScript 5.9.3 (strict) | Types for components and the `data/` layer |
-| UI runtime | React 19.3.0 | UI. Client islands only for theme, interaction score, and motion |
-| UI / styling | Tailwind CSS 4.3.3 via `@tailwindcss/postcss` 4.3.3 | Utilities and theme tokens in `app/globals.css` (`@theme inline`). No `tailwind.config.ts` |
+| Framework | Next.js 15.5.3 (App Router) | Four static routes, layout chrome, Vercel output |
+| Language | TypeScript 5.9.2 (strict) | Types for components and the `data/` layer |
+| UI runtime | React 19.1.1 | UI. Client islands only for theme, interaction score, and motion |
+| UI / styling | Tailwind CSS 4.1.13 via `@tailwindcss/postcss` 4.1.13 | Utilities and theme tokens in `app/globals.css` (`@theme inline`). No `tailwind.config.ts` |
 | Typography | Geist Sans + Geist Mono (`geist` 1.5.1, local files) | Display and body = Geist Sans (black/bold for headers). Mono = terminal, metadata, commands. `--font-geist-*` mapped to `--font-sans` / `--font-mono` |
 | Icons | lucide-react 0.544.0 | Theme toggle, nav if needed, About stack glyphs. No third-party brand-icon pack |
-| Lint | ESLint 9.39.5 + eslint-config-next 15.5.25 | `npm run lint` runs `eslint`. Ignores `.next/`, `node_modules/`, `out/`, `next-env.d.ts` |
+| Lint | ESLint 9.35.0 + eslint-config-next 15.5.3 | `npm run lint` runs `eslint`. Ignores `.next/`, `node_modules/`, `out/`, `next-env.d.ts` |
 | Theming | next-themes 0.4.6 | `attribute="class"`, `defaultTheme="dark"`, `enableSystem`, `disableTransitionOnChange`. Persistent layout background. Job `03` switches default from system to dark |
 | Animation | Framer Motion | Not installed yet. Job `07-motion-and-transitions` adds spring route transitions and card hover. `active:scale-95` is CSS from job `03` |
 | Images | next/image | Project mockups under `public/`. Profile photo only if it lands in `data/` + `public/` for About |

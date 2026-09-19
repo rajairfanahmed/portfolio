@@ -13,14 +13,15 @@ Next job
 - Job `01-project-setup` shipped
 - Job `02-theme-and-layout` shipped on https://rajairfanahmed.vercel.app/ (zinc tokens until job `03` retokens)
 - Job `03-home-page` shipped locally
+- Job `04-projects-page` shipped on live Vercel URL
 
 ## In Progress
 
-- None. Job `03` is done. Waiting for `/develop` for `04-projects-page`.
+- None. Job `04` is done. Waiting for `/develop` for `05-about-page`.
 
 ## Next Up
 
-- `/develop` `04-projects-page`
+- `/develop` `05-about-page`
 
 ## Open Questions
 

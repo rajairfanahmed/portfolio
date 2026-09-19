@@ -1,11 +1,11 @@
 export interface Project {
   title: string;
-  problem: string;
+  description: string;
   tags: string[];
   githubUrl: string;
   demoUrl: string;
-  imageSrc: string;
-  isFlagship: boolean;
+  image: string;
+  flagship: boolean;
 }
 
 export interface ExperienceItem {
@@ -51,43 +51,34 @@ export const site: SiteContent = {
     "PostgreSQL",
     "AI integrations",
   ],
-  // Placeholder projects until Raja replaces them with ThreatChain (FYP), Aura Gemstones, and any other locked titles. imageSrc files land in job 04.
+  // Placeholder projects until Raja replaces them with ThreatChain (FYP), Aura Gemstones, and any other locked titles. image files land in job 04.
   projects: [
     {
-      title: "AI Agent Workflow Engine",
-      problem: "Automates multi-step reasoning tasks for product teams.",
-      tags: ["Next.js", "TypeScript", "LangChain", "OpenAI"],
+      title: "ThreatChain (FYP)",
+      description: "A blockchain-based threat intelligence sharing platform.",
+      tags: ["Next.js", "Solidity", "TypeScript", "Tailwind"],
       githubUrl: "https://github.com/rajairfanahmed",
       demoUrl: "https://rajairfanahmed.vercel.app/",
-      imageSrc: "/projects/workflow-engine.png",
-      isFlagship: true,
+      image: "/projects/threatchain.svg",
+      flagship: true,
     },
     {
-      title: "Dev Community Platform",
-      problem: "A fast community surface with realtime discussion threads.",
-      tags: ["React", "Firebase", "Tailwind CSS"],
+      title: "Aura Gemstones",
+      description: "An elegant e-commerce surface for premium gemstones.",
+      tags: ["React", "PostgreSQL", "Stripe"],
       githubUrl: "https://github.com/rajairfanahmed",
       demoUrl: "https://rajairfanahmed.vercel.app/",
-      imageSrc: "/projects/dev-community.png",
-      isFlagship: false,
-    },
-    {
-      title: "Store Analytics Console",
-      problem: "Gives store owners a high-signal view of orders and revenue.",
-      tags: ["Next.js", "PostgreSQL", "Prisma"],
-      githubUrl: "https://github.com/rajairfanahmed",
-      demoUrl: "https://rajairfanahmed.vercel.app/",
-      imageSrc: "/projects/store-analytics.png",
-      isFlagship: false,
+      image: "/projects/aura-gemstones.svg",
+      flagship: false,
     },
     {
       title: "Portfolio Kit",
-      problem: "A static bento-grid kit for developer portfolios.",
-      tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      description: "A static bento-grid kit for developer portfolios.",
+      tags: ["Next.js", "Tailwind CSS", "TypeScript"],
       githubUrl: "https://github.com/rajairfanahmed",
       demoUrl: "https://rajairfanahmed.vercel.app/",
-      imageSrc: "/projects/portfolio-kit.png",
-      isFlagship: false,
+      image: "/projects/portfolio-kit.svg",
+      flagship: false,
     },
   ],
   // Placeholder experience until Raja replaces it.

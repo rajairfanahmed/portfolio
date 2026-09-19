@@ -15,7 +15,7 @@ This is a personal portfolio website for Raja Irfan Ahmed. It is a fully static 
 ## Core User Flow
 
 1. Recruiter lands on `/` and sees Raja Irfan Ahmed's name in ultra-bold display type, the line "Building Applications That Scale Brands.", window-chrome framing, hot skill capsules, View Projects, and Download CV. A viewport interaction score counts clicks, scrolls, and hovers.
-2. Recruiter opens `/projects` and reviews featured work in a high-density asymmetric grid (intended set includes ThreatChain (FYP) and Aura Gemstones once those rows replace placeholders in `data/`).
+2. Recruiter opens `/projects` and reviews featured work in a high-density asymmetric grid (intended set includes ThreatChain (FYP) and Aura Gemstones).
 3. Recruiter optionally opens `/about` for biography and principles inside a terminal motif, a bento of stack badges, and Experience/Education (BSCS, NUML Islamabad, 2026).
 4. Recruiter opens `/contact` and emails `rajairfana551@gmail.com` via `mailto:`, downloads the CV from Google Drive, or opens LinkedIn, GitHub, or the dev.to profile.
 5. Recruiter takes the primary action: contacting Raja Irfan Ahmed.
