@@ -14,7 +14,7 @@
 - Goal: Root layout uses the section container, `next-themes` is wired, and a fixed top-right Sun/Moon toggle switches light and dark with no flash on load.
 - Recipe: `03-your-product/02-theme-and-layout.md`
 - Dependencies: `01-project-setup`
-- Status: Pending
+- Status: Done
 
 ### 03-hero-section
 

@@ -6,22 +6,21 @@ Next job
 
 ## Current Goal
 
-`/verify` job `02-theme-and-layout` on https://rajairfanahmed.vercel.app/
+`/architect` job `03-hero-section`
 
 ## Completed
 
 - Job `01-project-setup` shipped
-- Recipe `03-your-product/02-theme-and-layout.md`
-- `/develop` for `02-theme-and-layout`: `next-themes` 0.4.6, `ThemeProvider`, `ThemeToggle`, section container on root `<main>`
+- Job `02-theme-and-layout` shipped on https://rajairfanahmed.vercel.app/
 
 ## In Progress
 
-- None. Source for job `02` is in the tree. Waiting for `/verify` (needs a commit and push so Vercel can pick it up).
+- None
 
 ## Next Up
 
-- `/verify` `02-theme-and-layout` on https://rajairfanahmed.vercel.app/
-- Then `/debug` if red, `/audit`, `/ship`
+- `/architect` `03-hero-section`
+- Then `/develop` that recipe only
 
 ## Open Questions
 
@@ -32,6 +31,7 @@ Next job
 
 ## Session Notes
 
-- Job `02` added `components/theme-provider.tsx` and `components/theme-toggle.tsx` only. Home page still shows `{site.name}` with no Hero, About, Projects, or Contact.
-- Lint, `tsc --noEmit`, and `npm run build` were green locally. Do not add Framer Motion or `@vercel/og` in this job.
-- `npm install` needed the Next.js dev server stopped (EBUSY on the lightningcss Windows binary). Do not add Windows-only packages to `package.json`.
+- `/verify` first pass: live URL still job 01 (heading only, 0 buttons) because `02` was unpushed. Local `npm run build` exit 0.
+- `/debug`: committed and pushed `702f975`. Live then showed the Sun/Moon toggle, `rgb(9, 9, 11)` / `rgb(250, 250, 250)`, `max-w-7xl` with `px-6` / `md:px-12`. `/api` 404.
+- `/audit`: stack versions in `architecture.md` match the lockfile (Next 15.5.25, React 19.3.0, Tailwind 4.3.3, next-themes 0.4.6). `components/` exists. No `app/api`, `lib/`, or `public/`. `AGENTS.md` left as the index.
+- `/ship`: `02-theme-and-layout` marked Done. Next job is `03-hero-section`. Job `03` was not started.
