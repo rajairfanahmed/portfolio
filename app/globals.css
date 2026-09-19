@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-muted: var(--accent-muted);
+  --color-border-default: var(--border-default);
+  --color-state-error: var(--state-error);
+  --color-state-success: var(--state-success);
+}
+
+:root {
+  --bg-base: #FAFAFA;
+  --bg-surface: #FFFFFF;
+  --text-primary: #09090B;
+  --text-muted: #71717A;
+  --accent-primary: #6366F1;
+  --accent-muted: #E0E7FF;
+  --border-default: #E4E4E7;
+  --state-error: #EF4444;
+  --state-success: #22C55E;
+}
+
+.dark {
+  --bg-base: #09090B;
+  --bg-surface: #18181B;
+  --text-primary: #FAFAFA;
+  --text-muted: #A1A1AA;
+  --accent-primary: #7C3AED;
+  --accent-muted: #312E81;
+  --border-default: #27272A;
+  --state-error: #F87171;
+  --state-success: #4ADE80;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
