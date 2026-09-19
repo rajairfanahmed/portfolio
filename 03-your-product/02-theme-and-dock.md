@@ -36,16 +36,16 @@
 
 # Verify when done
 
-- [ ] https://rajairfanahmed.vercel.app/ loads
-- [ ] Background is Obsidian `#050506` in dark (default) and Bone `#FCFCFD` after toggling to light
-- [ ] A glass dock is visible at the top on desktop and the bottom on a narrow viewport
-- [ ] Dock shows Home, Projects, Skills, About, Contact, Resume, and a theme toggle
-- [ ] The active pill springs to Home on `/` and to another label after clicking that link
-- [ ] Resume opens the CV in a new tab
-- [ ] Theme toggle switches light ↔ dark with no unstyled flash
-- [ ] Home still shows only the name heading (no hero, bento, or contact form)
-- [ ] Tab reaches every dock control; focus ring is 2px accent
-- [ ] Dock pills are at least 44×44px
-- [ ] `npm run build` passes
-- [ ] UX floor that applies: keyboard path and visible focus; 44px targets; WCAG 2.2 AA contrast from these tokens only; no new form; no second token set
-- [ ] API floor that applies: no list endpoint; no secrets; Resume is an outbound link only; build command is `npm run build`
+- [x] https://rajairfanahmed.vercel.app/ loads
+- [x] Background is Obsidian `#050506` in dark (default) and Bone `#FCFCFD` after toggling to light
+- [x] A glass dock is visible at the top on desktop and the bottom on a narrow viewport
+- [x] Dock shows Home, Projects, Skills, About, Contact, Resume, and a theme toggle
+- [x] The active pill springs to Home on `/` and to another label after clicking that link
+- [x] Resume opens the CV in a new tab
+- [x] Theme toggle switches light ↔ dark with no unstyled flash
+- [x] Home still shows only the name heading (no hero, bento, or contact form)
+- [x] Tab reaches every dock control; focus ring is 2px accent
+- [x] Dock pills are at least 44×44px
+- [x] `npm run build` passes
+- [x] UX floor that applies: keyboard path and visible focus; 44px targets; WCAG 2.2 AA contrast from these tokens only; no new form; no second token set
+- [x] API floor that applies: no list endpoint; no secrets; Resume is an outbound link only; build command is `npm run build`

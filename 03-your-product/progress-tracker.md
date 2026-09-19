@@ -6,10 +6,11 @@ Next job
 
 ## Current Goal
 
-Push job `02-theme-and-dock` and confirm https://rajairfanahmed.vercel.app/ shows the glass dock. Do not start job `03`.
+`/architect` job `03-home-page-and-transitions`. Do not start it until that command runs.
 
 ## Completed
 
+- Job `02-theme-and-dock` shipped on https://rajairfanahmed.vercel.app/ (`1ccddb9`). Obsidian/Bone tokens, glass dock on every route (five labels, Resume new tab, theme toggle, magnetic hover, `layoutId` pill). Home is still the name heading only.
 - Job `01-project-scaffold` shipped on https://rajairfanahmed.vercel.app/ (`ab0d438`). Home is the boot proof only: `{site.name}` from `@/data`, Geist Sans, no dock or theme toggle.
 - Job `01-project-setup` shipped (previous plan)
 - Job `02-theme-and-layout` shipped (previous plan)
@@ -28,7 +29,7 @@ Push job `02-theme-and-dock` and confirm https://rajairfanahmed.vercel.app/ show
 
 ## Next Up
 
-- Confirm live Vercel after push, then `/verify`
+- `/architect` job `03-home-page-and-transitions`
 
 ## Open Questions
 - Real project rows are not locked. Intended titles named by Raja: ThreatChain (FYP) and Aura Gemstones. Still needed before job `04`: problem line, tags, GitHub URL, live demo URL, mockup file, which card is flagship.
@@ -41,6 +42,6 @@ Push job `02-theme-and-dock` and confirm https://rajairfanahmed.vercel.app/ show
 ## Session Notes
 
 - Job `01-project-scaffold` added `zod`, `@/lib/validations`, and a Zod-parsed `@/data` site object. Home and root layout are a boot proof only: no dock, theme toggle, or hero.
-- Leftover previous-plan routes (`/projects`, `/skills`, `/about`, `/contact`) were not restyled. Data field access was updated so `npm run build` stays green (`imageSrc`, `skill.name`).
+- Leftover previous-plan routes (`/projects`, `/skills`, `/about`, `/contact`) were not restyled into later-job layouts. Job `02` only applies shared tokens and the dock.
 - Framer Motion is mounted on the dock (`layoutId` pill, magnetic translate, theme icon fade). Page `AnimatePresence` is still job `03`.
-- Job `02-theme-and-dock` implemented locally. Obsidian/Bone tokens, glass dock (five routes, Resume, theme toggle, magnetic hover, `layoutId` pill). Lint, types, and `npm run build` are green. Not marked done until the Vercel URL is confirmed.
+- `/verify` passed on https://rajairfanahmed.vercel.app/ for job `02-theme-and-dock`. Dark body `rgb(5, 5, 6)` / `--bg-base: #050506`; light after toggle `rgb(252, 252, 253)` / `#fcfcfd`. Desktop dock `top: 24px` at 1280px; 375px screenshot shows the dock at the bottom. Active pill Home on `/`, Projects after click. Resume is `target="_blank" rel="noopener noreferrer"` to the Drive CV. `npm run build` green (Next.js 15.5.25). No `app/api`. Recipe `03-home-page-and-transitions.md` is not written yet.

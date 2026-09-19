@@ -14,7 +14,7 @@
 - Goal: Root layout establishes `next-themes` dual-layer spatial tokens (Obsidian/Bone) and mounts a floating glassmorphic dock navbar featuring magnetic hover states and a Framer Motion `layoutId` active route pill.
 - Recipe: `03-your-product/02-theme-and-dock.md`
 - Dependencies: `01-project-scaffold`
-- Status: Pending
+- Status: Done
 
 ### 03-home-page-and-transitions
 
