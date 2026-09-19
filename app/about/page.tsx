@@ -35,7 +35,7 @@ export default function AboutPage() {
           {site.skills.map((skill) => (
             <div
               key={skill}
-              className="group flex flex-col items-center justify-center gap-3 rounded-xl border border-default bg-surface p-6 transition-colors hover:border-accent-primary/50 hover:shadow-[0_0_15px_var(--color-accent-muted)]"
+              className="group flex flex-col items-center justify-center gap-3 rounded-xl border border-default bg-surface p-6 transition-all active:scale-95 shadow-md dark:border-none dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_rgba(255,255,255,0.05)] hover:border-accent-primary/50 hover:shadow-[0_0_15px_var(--color-accent-muted)] hover:dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_var(--color-accent-primary),0_0_15px_var(--color-accent-muted)]"
             >
               <div className="text-muted transition-colors group-hover:text-accent-primary">
                 {getSkillIcon(skill)}

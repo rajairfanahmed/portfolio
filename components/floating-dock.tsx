@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { springPhysics } from "@/lib/motion";
 
 const links = [
   { href: "/", label: "Home" },
@@ -18,7 +19,7 @@ export function FloatingDock() {
   return (
     <div className="pointer-events-none fixed bottom-6 left-0 right-0 z-50 mx-auto flex justify-center md:bottom-auto md:top-6">
       <nav
-        className="pointer-events-auto flex items-center gap-1 rounded-2xl bg-black/5 p-1.5 shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_rgba(255,255,255,0.05)] backdrop-blur-xl dark:bg-white/5"
+        className="pointer-events-auto flex items-center gap-1 rounded-2xl bg-black/5 p-1.5 shadow-md dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_rgba(255,255,255,0.05)] backdrop-blur-xl dark:bg-white/5"
         aria-label="Main Navigation"
       >
         {links.map((link) => {
@@ -35,12 +36,7 @@ export function FloatingDock() {
                 <motion.div
                   layoutId="activePill"
                   className="absolute inset-0 rounded-xl bg-black/5 shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1)] dark:bg-white/10"
-                  transition={{
-                    type: "spring",
-                    mass: 0.8,
-                    stiffness: 250,
-                    damping: 24,
-                  }}
+                  transition={springPhysics}
                 />
               )}
               <span className="relative z-10">{link.label}</span>

@@ -4,7 +4,7 @@ import { site } from "@/data";
 export function Hero() {
   return (
     <section className="py-16 md:py-24">
-      <div className="rounded-2xl border border-default bg-surface p-6 shadow-sm md:p-12">
+      <div className="rounded-2xl border border-default bg-surface p-6 shadow-md dark:border-none dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_rgba(255,255,255,0.05)] md:p-12">
         {/* Window Chrome */}
         <div className="mb-12 flex gap-2" aria-hidden="true">
           <div className="h-3 w-3 rounded-full bg-window-close" />

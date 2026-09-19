@@ -22,7 +22,7 @@
 | Icons | lucide-react 0.544.0 | Theme toggle, nav if needed, About stack glyphs. No third-party brand-icon pack |
 | Lint | ESLint 9.35.0 + eslint-config-next 15.5.3 | `npm run lint` runs `eslint`. Ignores `.next/`, `node_modules/`, `out/`, `next-env.d.ts` |
 | Theming | next-themes 0.4.6 | `attribute="class"`, `defaultTheme="dark"`, `enableSystem`, `disableTransitionOnChange`. Persistent layout background. Job `03` switches default from system to dark |
-| Animation | Framer Motion | Installed. Spring route transitions via `app/template.tsx` and hover scaling. `active:scale-95` is native CSS. |
+| Animation | Framer Motion | Installed. Spring route transitions via `components/transition-wrapper.tsx` wrapping `<main>` in `app/layout.tsx`. `active:scale-95` is native CSS. |
 | Images | next/image | Project mockups under `public/`. Profile photo only if it lands in `data/` + `public/` for About |
 | Metadata | next/og | Installed. Generates dynamic 1200x630 OG images and a 32x32 favicon via edge runtime. |
 | Auth | None | Public site, no sessions |
@@ -49,7 +49,7 @@ Do not add WebGL, Three.js, Barba.js, `@tanstack/react-virtual`, or Embla unless
 - `app/` — Exists. `layout.tsx`, `page.tsx`, `globals.css`, `projects/page.tsx`, `skills/page.tsx`, `about/page.tsx`, `contact/page.tsx`. No `app/api`.
 - `data/` — Exists. `index.ts` is the typed content source (`site: SiteContent`).
 - `components/` — Exists. `floating-dock.tsx`, `hero.tsx`, `interaction-score.tsx`, `project-card.tsx`, `terminal-frame.tsx`, `theme-provider.tsx`, `theme-toggle.tsx`, `transition-wrapper.tsx`.
-- `lib/` — Does not exist yet. Reserved for motion variants and small pure helpers.
+- `lib/` — Exists. Contains `motion.ts` and small pure helpers.
 - `public/` — Exists. `projects/` for mockups. Optional profile photo later.
 - No `src/` directory. Import alias `@/*` maps to the repo root.
 

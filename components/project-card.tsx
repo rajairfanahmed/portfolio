@@ -5,7 +5,7 @@ import type { Project } from "@/data";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article
-      className={`group relative flex flex-col overflow-hidden rounded-2xl border border-default bg-surface transition-colors group-hover:border-accent-primary/50 group-hover:shadow-[0_0_15px_var(--color-accent-muted)] ${
+      className={`group relative flex flex-col overflow-hidden rounded-2xl border border-default bg-surface transition-all active:scale-95 shadow-md dark:border-none dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_rgba(255,255,255,0.05)] group-hover:border-accent-primary/50 group-hover:shadow-[0_0_15px_var(--color-accent-muted)] group-hover:dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_var(--color-accent-primary),0_0_15px_var(--color-accent-muted)] ${
         project.flagship ? "md:col-span-2" : ""
       }`}
     >

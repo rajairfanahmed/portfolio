@@ -41,7 +41,7 @@ export function InteractionScore() {
   return (
     <div
       aria-live="polite"
-      className="fixed bottom-6 right-6 z-50 flex h-11 items-center justify-center rounded-md border border-default bg-surface px-4 font-mono text-sm text-muted tabular-nums shadow-sm"
+      className="fixed bottom-6 right-6 z-50 flex h-11 items-center justify-center rounded-md border border-default bg-surface px-4 font-mono text-sm text-muted tabular-nums shadow-md dark:border-none dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_rgba(255,255,255,0.05)]"
     >
       Score: {score}
     </div>

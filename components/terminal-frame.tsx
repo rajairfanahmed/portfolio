@@ -8,7 +8,7 @@ export function TerminalFrame({
   command: string;
 }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-default bg-surface shadow-xl">
+    <div className="overflow-hidden rounded-xl border border-default bg-surface shadow-xl dark:border-none dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.1),0_0_0_1px_rgba(255,255,255,0.05)]">
       {/* Window Header */}
       <div className="flex items-center border-b border-default bg-elevated px-4 py-3">
         <div className="flex gap-2">

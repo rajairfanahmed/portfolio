@@ -19,6 +19,7 @@ Next job
 - Job `07-motion-and-transitions` shipped on live Vercel URL
 - Job `08-seo-and-metadata` shipped on live Vercel URL
 - Job `09-global-navigation` shipped locally
+- Job `10-theme-and-depth` shipped locally
 
 ## In Progress
 
@@ -26,7 +27,7 @@ Next job
 
 ## Next Up
 
-- `/develop` job `10-theme-and-depth`
+- `/develop` job `11-home-expansion`
 
 ## Open Questions
 - Real project rows are not locked. Intended titles named by Raja: ThreatChain (FYP) and Aura Gemstones. Still needed before job `04`: problem line, tags, GitHub URL, live demo URL, mockup file, which card is flagship.

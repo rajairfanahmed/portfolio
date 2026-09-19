@@ -70,7 +70,7 @@
 - Goal: Implement Spatial Depth & Dual-Theme Fidelity. Update `app/globals.css` with Obsidian/Charcoal and Bone/White bases. Apply 1px milled borders (`box-shadow: inset ...`) globally. Ensure `active:scale-95` tactile depressions are on all interactive elements. Replace linear transitions with spring physics (`mass: 0.8, stiffness: 250, damping: 24`).
 - Recipe: `03-your-product/10-theme-and-depth.md`
 - Dependencies: `09-global-navigation`
-- Status: Pending
+- Status: Done
 
 ### 11-home-expansion
 

@@ -2,9 +2,9 @@
 @source "../components";
 
 :root {
-  --bg-base: #F5F5F0;
+  --bg-base: #FCFCFD;
   --bg-surface: #FFFFFF;
-  --bg-elevated: #EFECE6;
+  --bg-elevated: #F5F5F0;
   --text-primary: #0A0A0A;
   --text-muted: #52525B;
   --accent-primary: #E64500;
@@ -18,9 +18,9 @@
 }
 
 .dark {
-  --bg-base: #0A0A0A;
-  --bg-surface: #141414;
-  --bg-elevated: #1A1A1A;
+  --bg-base: #050506;
+  --bg-surface: #0A0A0C;
+  --bg-elevated: #111115;
   --text-primary: #FAFAFA;
   --text-muted: #A1A1AA;
   --accent-primary: #FF4D00;
@@ -64,3 +64,5 @@ body {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
+
+

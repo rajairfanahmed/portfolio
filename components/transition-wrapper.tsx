@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { springPhysics } from "@/lib/motion";
 
 export function TransitionWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -13,7 +14,7 @@ export function TransitionWrapper({ children }: { children: React.ReactNode }) {
         initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
         animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
         exit={{ opacity: 0, filter: "blur(4px)", y: -10 }}
-        transition={{ type: "spring", mass: 0.8, stiffness: 250, damping: 24 }}
+        transition={springPhysics}
         className="mx-auto max-w-7xl px-6 pb-32 pt-12 md:px-12 md:pb-24 md:pt-32"
       >
         {children}
