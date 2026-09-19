@@ -26,6 +26,9 @@ Then read the matching persona:
 - UX floor is always on (`04-always-on-rules/floor-ux.md`). Visual level cannot turn it off
 - API floor is always on (`04-always-on-rules/floor-api.md`)
 - Do not replace this file or the root `AGENTS.md` with a stack dump
+- App source lives only in the project folder named in `03-your-product/architecture.md` (Host → Project folder). Never write the app into the discipline root. Never overwrite the discipline `README.md`
+- If `IMPROVE.md` or `{project-name}/IMPROVE.md` has new paste text, follow **New feature later** in `01-start-here/HOW-TO-BUILD.md`. Do not start from idea again
+- `/brief` and the idea prompt never create a GitHub repo. `/ship` never creates a GitHub repo. The repo is created only after `03-your-product` is real, for the project folder only
 
 # Commands
 

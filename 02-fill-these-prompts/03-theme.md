@@ -10,14 +10,21 @@ Use this after `03-your-product/project-overview.md` and `03-your-product/archit
 
 - `03-your-product/project-overview.md`
 - `03-your-product/architecture.md`
+- `04-always-on-rules/lanes-frontend.md`
 - `04-always-on-rules/catalog-frontend.md`
 - `04-always-on-rules/floor-ux.md`
 
 # You ask
 
-Recommend one set of frontend axes from `04-always-on-rules/catalog-frontend.md`. Mark one option recommended. Wait for the user to confirm. Then write the file.
+Stop and wait. Recommend named lanes from `04-always-on-rules/lanes-frontend.md`, not a vague "modern dark".
 
-Say why it fits this product. If two surfaces exist (marketing vs app), recommend two named sets.
+- Visual execution: Google / Awwwards / Apple / Dribbble / E-commerce / SaaS / Linear / Vercel / Stripe / Shopify
+- Motion: Apple / Stripe / Awwwards / Linear
+- Product UX: Raycast / tabular / E-commerce CRO / SaaS dashboard / Shopify store
+
+Mark one `(recommended)` per group. Then write `ui-context.md`.
+
+For a developer portfolio, recommend Linear + Vercel visual, Apple/Stripe motion, Raycast UX, unless the product is a shop or a 3D campaign.
 
 # You write
 
@@ -26,19 +33,21 @@ Plain markdown. No extra commentary. Headings must match `03-your-product/ui-con
 # Headings you must output
 
 - `# UI Context`
-- `## Frontend levels` (the confirmed axes)
+- `## Frontend levels` (catalog axes)
+- `## Lanes` (confirmed named lanes: visual, motion, UX)
 - `## Theme`
-- `## Colors` (semantic CSS variables and hex values)
+- `## Colors` (semantic CSS variables and hex values. Spatial layers if Linear/Vercel. Never a single flat `#000000` unless they asked for Brutalist)
 - `## Typography`
 - `## Border Radius`
 - `## Component Library`
-- `## Layout Patterns`
+- `## Layout Patterns` (include dock / command palette if those lanes won)
 - `## Icons`
-- `## Skills and stack` (from the chosen levels in `04-always-on-rules/catalog-frontend.md`)
-- `## Tables` (from those levels)
-- `## Pagination` (from those levels)
-- `## Level UX` (from those levels)
-- `## UX floor` (paste the rules from `04-always-on-rules/floor-ux.md` in project words)
+- `## Motion` (from the motion lane)
+- `## Skills and stack`
+- `## Tables`
+- `## Pagination`
+- `## Level UX`
+- `## UX floor`
 
 # Rules
 
@@ -46,4 +55,4 @@ Plain markdown. No extra commentary. Headings must match `03-your-product/ui-con
 - Visual level never removes pagination, empty, loading, error, or forms
 - WCAG 2.2 AA unless the user waives it here in writing
 - Match the stack already in `03-your-product/architecture.md` (example: Tailwind + shadcn)
-- No `[placeholders]`
+- Never output the failed generic portfolio: orange pills, placeholder circles, fake terminal hero, no motion, no depth

@@ -31,3 +31,5 @@ Plain markdown. No extra commentary. Headings must match `03-your-product/projec
 - Out of Scope must be real. Name things you will not build
 - Success criteria must be visible or testable
 - Do not pick stack, theme, or job numbers here
+- Do not create a GitHub repo
+- Do not create a project folder

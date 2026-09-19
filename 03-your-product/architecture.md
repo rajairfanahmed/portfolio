@@ -46,9 +46,9 @@ Do not add WebGL, Three.js, Barba.js, `@tanstack/react-virtual`, or Embla unless
 
 ## System Boundaries
 
-- `app/` — Exists. `layout.tsx`, `page.tsx`, `globals.css`, `projects/page.tsx`, `about/page.tsx`, `contact/page.tsx`. No `app/api`.
+- `app/` — Exists. `layout.tsx`, `page.tsx`, `globals.css`, `projects/page.tsx`, `skills/page.tsx`, `about/page.tsx`, `contact/page.tsx`. No `app/api`.
 - `data/` — Exists. `index.ts` is the typed content source (`site: SiteContent`).
-- `components/` — Exists. `theme-provider.tsx`, `theme-toggle.tsx`, `site-nav.tsx`, `hero.tsx`, `interaction-score.tsx`, `project-card.tsx`, `terminal-frame.tsx`.
+- `components/` — Exists. `floating-dock.tsx`, `hero.tsx`, `interaction-score.tsx`, `project-card.tsx`, `terminal-frame.tsx`, `theme-provider.tsx`, `theme-toggle.tsx`, `transition-wrapper.tsx`.
 - `lib/` — Does not exist yet. Reserved for motion variants and small pure helpers.
 - `public/` — Exists. `projects/` for mockups. Optional profile photo later.
 - No `src/` directory. Import alias `@/*` maps to the repo root.
@@ -57,10 +57,11 @@ Do not add WebGL, Three.js, Barba.js, `@tanstack/react-virtual`, or Embla unless
 
 | Path | Page | Job |
 | --- | --- | --- |
-| `/` | Home — executive hook | `03-home-page` |
-| `/projects` | Projects — technical evidence | `04-projects-page` |
-| `/about` | About — terminal bio, stack bento, education | `05-about-page` |
-| `/contact` | Contact — conversion | `06-contact-page` |
+| `/` | Home — executive hook | `03-home-page`, `11-home-expansion` |
+| `/projects` | Projects — technical evidence | `04-projects-page`, `12-projects-upgrade` |
+| `/skills` | Skills — production capabilities | `13-skills-route` |
+| `/about` | About — IDE bio, scroll-linked timeline | `05-about-page`, `14-about-timeline` |
+| `/contact` | Contact — 2x2 conversion bento, live clock | `06-contact-page`, `15-contact-bento` |
 
 The root layout owns fonts, tokens, ThemeProvider, site nav, theme toggle, and the interaction score. Page files compose sections only.
 

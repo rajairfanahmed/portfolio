@@ -34,7 +34,7 @@ Then one block per job:
 - Numbers are `01`, `02`, `03`. The name is the file name
 - One visible result per job
 - Do not mix UI, database, and background work in one job
-- Job `01` is scaffold or site shell if no app exists yet. Not the whole product
+- Job `01` is scaffold or site shell **inside the project folder** if no app exists yet. Not the whole product. Not in the discipline root
 - Auth before the pages it protects
 - Data model before the screens that need it
 - Infra (env, Vercel notes) belongs in an early job if the app is new

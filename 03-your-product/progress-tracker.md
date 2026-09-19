@@ -6,7 +6,7 @@ Next job
 
 ## Current Goal
 
-`/develop` job `04-projects-page` using `03-your-product/04-projects-page.md`
+`/develop` job `10-theme-and-depth` using `03-your-product/10-theme-and-depth.md`
 
 ## Completed
 
@@ -18,18 +18,17 @@ Next job
 - Job `06-contact-page` shipped on live Vercel URL
 - Job `07-motion-and-transitions` shipped on live Vercel URL
 - Job `08-seo-and-metadata` shipped on live Vercel URL
+- Job `09-global-navigation` shipped locally
 
 ## In Progress
 
-- ALL JOBS COMPLETE. The portfolio is 100% finished.
+- None
 
 ## Next Up
 
-- Celebrate! 🎉
+- `/develop` job `10-theme-and-depth`
 
 ## Open Questions
-
-- **SiteNav Component Type**: `03-home-page.md` requested `components/site-nav.tsx` as a Server Component but also requested `aria-current="page" on the active route`. In Next.js App Router, reading the active pathname is only possible in Client Components via `usePathname()`. To meet the `aria-current` accessibility requirement, I made it a `"use client"` component. Is this acceptable, or should we drop `aria-current` to keep it a Server Component?
 - Real project rows are not locked. Intended titles named by Raja: ThreatChain (FYP) and Aura Gemstones. Still needed before job `04`: problem line, tags, GitHub URL, live demo URL, mockup file, which card is flagship.
 - Remaining featured projects beyond those two are still open.
 - Real experience wording is still open. Education is locked: BSCS, National University of Modern Languages, Islamabad, 2026.

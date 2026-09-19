@@ -34,7 +34,7 @@ Plain markdown. No extra commentary. Headings must match `03-your-product/archit
 - `# Architecture`
 - `## Backend levels` (the confirmed axes)
 - `## Stack` (table: layer, technology, role)
-- `## Host` (Vercel, project URL if known, env var names not values)
+- `## Host` (Vercel, project folder name, project URL if known, env var names not values)
 - `## System Boundaries`
 - `## Storage Model`
 - `## Auth and Access Model`
@@ -45,6 +45,7 @@ Plain markdown. No extra commentary. Headings must match `03-your-product/archit
 
 - Vercel is the host unless the user names another
 - Vercel is not the database. If there is data, name Neon or Supabase
-- Do not invent folders that the scaffold will not have
+- Propose a kebab-case Project folder name from the product title. Do not create the folder. Do not create a GitHub repo
+- Do not invent app folders that the scaffold will not have
 - No `[placeholders]`
 - Do not write UI tokens here

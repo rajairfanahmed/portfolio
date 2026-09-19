@@ -4,7 +4,8 @@ import { GeistSans } from "geist/font/sans";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { SiteNav } from "@/components/site-nav";
+import { FloatingDock } from "@/components/floating-dock";
+import { TransitionWrapper } from "@/components/transition-wrapper";
 import { InteractionScore } from "@/components/interaction-score";
 import { site } from "@/data";
 
@@ -51,11 +52,11 @@ export default function RootLayout({
     >
       <body className="bg-base font-sans text-primary antialiased">
         <ThemeProvider>
-          <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-12">
-            <SiteNav />
+          <div className="fixed right-6 top-6 z-50 md:right-12">
             <ThemeToggle />
-          </header>
-          <main className="mx-auto max-w-7xl px-6 md:px-12">{children}</main>
+          </div>
+          <FloatingDock />
+          <TransitionWrapper>{children}</TransitionWrapper>
           <InteractionScore />
         </ThemeProvider>
       </body>

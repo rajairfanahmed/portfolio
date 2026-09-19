@@ -21,3 +21,4 @@ Write one recipe. No app code.
 - Do not invent features
 - Do not write application source
 - Do not start `/develop`
+- Do not create a GitHub repo

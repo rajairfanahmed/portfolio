@@ -13,7 +13,7 @@ Fix. Do not add a feature.
 - Reproduce
 - Locate
 - Fix the smallest change
-- Run lint, types, `npm run build`
+- Run lint, types, `npm run build` inside the project folder
 - If product law is missing, write an open question in `03-your-product/progress-tracker.md` and stop
 
 # Stop
