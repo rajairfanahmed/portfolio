@@ -54,7 +54,7 @@
 
 - `app/` — routes, layouts, `globals.css`. Today: `layout.tsx` and `page.tsx` only. Composition only.
 - `data/` — typed content and shared interfaces in `data/index.ts`. Export `site`.
-- `components/` — not in the tree yet. When added, UI sections and controls only. No content constants.
+- `components/` — UI sections and controls only. No content constants. Today: `theme-provider.tsx`, `theme-toggle.tsx`.
 - `lib/` — not in the tree yet. When added, motion variants and small pure helpers.
 - `public/` — not in the tree yet. When added, profile photo, project screenshots, favicon source.
 - Tailwind tokens live in `app/globals.css`. Do not add `tailwind.config.ts` unless the stack in `03-your-product/architecture.md` changes.

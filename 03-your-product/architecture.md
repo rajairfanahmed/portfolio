@@ -19,9 +19,9 @@
 | UI runtime | React 19.3.0 | UI |
 | UI / styling | Tailwind CSS 4.3.3 via `@tailwindcss/postcss` 4.3.3 | Utilities and theme tokens in `app/globals.css` (`@theme inline`). No `tailwind.config.ts` |
 | Typography | Geist Sans + Geist Mono (`geist` 1.5.1, local files) | `--font-geist-sans` / `--font-geist-mono` mapped to `--font-sans` / `--font-mono` |
-| Icons | lucide-react 0.544.0 | Installed. Not used in the job 01 scaffold page |
+| Icons | lucide-react 0.544.0 | Theme toggle uses Lucide `Sun` and `Moon` |
 | Lint | ESLint 9.39.5 + eslint-config-next 15.5.25 | `npm run lint` runs `eslint`. Ignores `.next/`, `node_modules/`, `out/`, `next-env.d.ts` |
-| Theming | next-themes | Not installed. Job `02-theme-and-layout` |
+| Theming | next-themes 0.4.6 | `attribute="class"`, `defaultTheme="system"`, `enableSystem`, `disableTransitionOnChange`. Job `02` |
 | Animation | Framer Motion | Not installed. Job `07-motion-and-interactions` |
 | Images | next/image | No images in the tree yet. Job `03` and `05` add files under `public/` |
 | Metadata | @vercel/og | Not installed. Job `08-seo-and-metadata` |
@@ -46,7 +46,7 @@
 
 - `app/` — Exists. `layout.tsx`, `page.tsx`, `globals.css` only. No `app/api`, no `opengraph-image.tsx`, no `favicon.ico`.
 - `data/` — Exists. `index.ts` is the typed content source (`site: SiteContent`).
-- `components/` — Does not exist yet. Reserved for section UI starting job `02`.
+- `components/` — Exists. `theme-provider.tsx` and `theme-toggle.tsx` only.
 - `lib/` — Does not exist yet. Reserved for motion/theme helpers.
 - `public/` — Does not exist yet. Reserved for profile photo and project screenshots.
 - No `src/` directory. Import alias `@/*` maps to the repo root.

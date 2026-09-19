@@ -6,22 +6,22 @@ Next job
 
 ## Current Goal
 
-`/architect` job `02-theme-and-layout`
+`/verify` job `02-theme-and-layout` on https://rajairfanahmed.vercel.app/
 
 ## Completed
 
-- Brief files in `03-your-product`
 - Job `01-project-setup` shipped
-- Live URL https://rajairfanahmed.vercel.app/ is the scaffold (name heading only)
-- `/audit` after scaffold: `03-your-product` matches the real tree
+- Recipe `03-your-product/02-theme-and-layout.md`
+- `/develop` for `02-theme-and-layout`: `next-themes` 0.4.6, `ThemeProvider`, `ThemeToggle`, section container on root `<main>`
 
 ## In Progress
 
-- None
+- None. Source for job `02` is in the tree. Waiting for `/verify` (needs a commit and push so Vercel can pick it up).
 
 ## Next Up
 
-- `/architect` `02-theme-and-layout`
+- `/verify` `02-theme-and-layout` on https://rajairfanahmed.vercel.app/
+- Then `/debug` if red, `/audit`, `/ship`
 
 ## Open Questions
 
@@ -32,7 +32,6 @@ Next job
 
 ## Session Notes
 
-- `/verify` 2026-09-19: live page title `Raja Irfan Ahmed`, one `h1`, 0 links, 0 buttons. Computed `background rgb(250, 250, 250)`, `color rgb(9, 9, 11)`, font `GeistSans`. `/api` is 404. `app/page.tsx` uses `{site.name}`. Local `npm run build` exit 0 after restoring the lightningcss Windows binary in `node_modules` (not added to `package.json`).
-- `/debug`: local build failed on missing `lightningcss.win32-x64-msvc.node` after a TLS-broken optional install. Did not add a Windows-only package to `package.json`.
-- `/audit`: architecture already had the live URL and real commands. Folders still `app/` + `data/` only. No `AGENTS.md` rewrite.
-- `/ship`: `01-project-setup` marked Done. Next job is `02-theme-and-layout`. Job `02` was not started.
+- Job `02` added `components/theme-provider.tsx` and `components/theme-toggle.tsx` only. Home page still shows `{site.name}` with no Hero, About, Projects, or Contact.
+- Lint, `tsc --noEmit`, and `npm run build` were green locally. Do not add Framer Motion or `@vercel/og` in this job.
+- `npm install` needed the Next.js dev server stopped (EBUSY on the lightningcss Windows binary). Do not add Windows-only packages to `package.json`.

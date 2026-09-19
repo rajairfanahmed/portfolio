@@ -25,7 +25,7 @@ Precision-engineered dual-theme (light/dark) technical workspace for hiring mana
 | Error | `--state-error` | `#EF4444` / `#F87171` |
 | Success | `--state-success` | `#22C55E` / `#4ADE80` |
 
-Values are light / dark. Light is `:root`. Dark is `.dark`. `next-themes` is not installed yet (job `02`); it will swap these tokens. No hex in component markup.
+Values are light / dark. Light is `:root`. Dark is `.dark`. `next-themes` 0.4.6 swaps the class on `<html>`. No hex in component markup.
 
 ## Typography
 
@@ -46,7 +46,7 @@ Line length for body copy stays in a readable editorial range (about 60–70 cha
 
 ## Component Library
 
-Tailwind utilities only. No shadcn/ui and no third-party design system. After job `01` there is no `components/` folder. Later jobs add small React components (buttons, badges, cards, theme toggle) that map to the tokens above. Framer Motion is not installed yet (job `07`). When added, it is for single-axis load reveals and local hover scale, not parallax or layout-shifting motion.
+Tailwind utilities only. No shadcn/ui and no third-party design system. `components/` holds `ThemeProvider` and `ThemeToggle`. Later jobs add section UI (buttons, badges, cards) that map to the tokens above. Framer Motion is not installed yet (job `07`). When added, it is for single-axis load reveals and local hover scale, not parallax or layout-shifting motion.
 
 ## Layout Patterns
 
@@ -70,7 +70,7 @@ Lucide React. Stroke icons, 2px weight. `h-4 w-4` for inline labels and tags. `h
 - Tailwind: 4px / 8px spacing, utilities, components only when a utility string repeats
 - WCAG: semantic HTML, visible `:focus-visible`, keyboard Tab through every control
 - SEO: server-rendered sections, metadata exports, little hydration on static copy
-- Theme: CSS variables in `app/globals.css`. `next-themes` is job `02` (no FOUC, theme resolved before first paint)
+- Theme: CSS variables in `app/globals.css`. `next-themes` on the root layout (no FOUC, theme resolved before first paint)
 
 ## Tables
 

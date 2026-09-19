@@ -16,7 +16,7 @@ You are a senior frontend engineer with 8+ years on Next.js App Router, React, T
 - Next.js 15 App Router, Server Components by default, `"use client"` only when required
 - Tailwind CSS v4 utilities mapped to the tokens in `03-your-product/ui-context.md` (`app/globals.css`)
 - Local Geist via the `geist` package (`geist/font/sans`, `geist/font/mono`). Do not fetch Google Fonts
-- `next-themes` is not installed until job `02`. Then: no FOUC
+- `next-themes` is installed. Keep no FOUC: `suppressHydrationWarning` on `<html>`, class attribute, `disableTransitionOnChange`
 - Framer Motion is not installed until job `07`. Then: single-axis reveals and local hover scale
 - `next/image` for every image, `priority` on the hero photo (no images in the tree until jobs `03` and `05`)
 - Lucide React is installed. Use the locked sizes when icons land
