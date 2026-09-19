@@ -44,11 +44,11 @@
 
 # Verify when done
 
-- [ ] https://rajairfanahmed.vercel.app/ loads
-- [ ] Visible text includes the name from `@/data` (`Raja Irfan Ahmed`), not a hardcoded string in `app/page.tsx`
-- [ ] Body type is Geist Sans
-- [ ] No floating dock, no theme toggle, no project cards, no skills table, no mailto button, no contact form
-- [ ] View source / network: no `/api` routes and no auth
-- [ ] `npm run build` passes
-- [ ] UX floor that applies: no long list on this page; no new form; this job does not invent a second token set
-- [ ] API floor that applies: no list endpoint; no secrets in the repo; no runtime data fetch; build command is `npm run build`
+- [x] https://rajairfanahmed.vercel.app/ loads
+- [x] Visible text includes the name from `@/data` (`Raja Irfan Ahmed`), not a hardcoded string in `app/page.tsx`
+- [x] Body type is Geist Sans
+- [x] No floating dock, no theme toggle, no project cards, no skills table, no mailto button, no contact form
+- [x] View source / network: no `/api` routes and no auth
+- [x] `npm run build` passes
+- [x] UX floor that applies: no long list on this page; no new form; this job does not invent a second token set
+- [x] API floor that applies: no list endpoint; no secrets in the repo; no runtime data fetch; build command is `npm run build`
