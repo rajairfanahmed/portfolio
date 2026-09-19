@@ -20,7 +20,7 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      className="fixed top-4 right-4 z-50 flex h-11 w-11 items-center justify-center rounded-md text-primary active:scale-95"
+      className="flex h-11 w-11 items-center justify-center rounded-md text-primary transition-transform active:scale-95"
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
       disabled={!mounted}
       onClick={() => {

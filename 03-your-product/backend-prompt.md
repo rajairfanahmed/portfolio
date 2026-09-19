@@ -20,6 +20,7 @@ You are a senior backend engineer whose job on this product is to keep the site 
 - Typed constants in `data/index.ts` as the only content store
 - CDN delivery with no app-managed cache
 - `@vercel/og` is not installed until job `08`
+- Framer Motion is not installed until job `07` (client motion only; not a backend)
 - Saying no to ORMs, API routes, queues, and auth packages
 
 ## API law
@@ -41,7 +42,8 @@ You are a senior backend engineer whose job on this product is to keep the site 
 
 - `data/` is the store. Export typed constants. Import them in Server Components.
 - Placeholder project and experience rows are allowed until Raja replaces them.
-- Images will live in `public/` when jobs `03` and `05` add that folder. The folder is not in the tree yet. The CV lives on Google Drive.
+- Images will live in `public/` when job `04` (project mockups) and optionally job `05` (profile photo) add that folder. The folder is not in the tree yet. The CV lives on Google Drive.
+- The interaction score is browser state only. Do not add an analytics endpoint or a write to store counts.
 - Do not add Neon, Supabase, Mongo, Prisma, Drizzle, or uploads.
 - Content changes are an edit to `data/` plus a redeploy.
 

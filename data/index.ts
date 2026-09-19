@@ -38,7 +38,7 @@ export interface SiteContent {
 
 export const site: SiteContent = {
   name: "Raja Irfan Ahmed",
-  positioning: "Full Stack AI Web Apps Developer",
+  positioning: "Building Applications That Scale Brands.",
   // Placeholder until Raja replaces this bio.
   bio: "I build full stack AI web apps with a focus on speed, clear architecture, and recruiter-ready proof of work.",
   // Placeholder skill list until Raja replaces it.
@@ -51,7 +51,7 @@ export const site: SiteContent = {
     "PostgreSQL",
     "AI integrations",
   ],
-  // Placeholder projects until Raja replaces them. imageSrc files land in later jobs.
+  // Placeholder projects until Raja replaces them with ThreatChain (FYP), Aura Gemstones, and any other locked titles. imageSrc files land in job 04.
   projects: [
     {
       title: "AI Agent Workflow Engine",

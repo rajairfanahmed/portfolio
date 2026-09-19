@@ -19,20 +19,22 @@
 
 ## Framework
 
-- Default to Server Components. Add `"use client"` only for state, effects, handlers, Framer Motion triggers, or the theme toggle.
+- Default to Server Components. Add `"use client"` only for state, effects, handlers, Framer Motion, the theme toggle, or the interaction score.
 - Do not fetch site content at runtime. Import `data/` at build time.
 - Do not create `app/api` routes.
 - Use Next.js metadata files and `metadata` exports. Do not inject raw `<meta>` tags by hand.
 - Use `next/image` for every image. Raw `<img>` is forbidden.
 - Use named exports for UI in `components/`. Default exports only for Next.js `page` and `layout` files.
+- Route between `/`, `/projects`, `/about`, and `/contact` with `next/link`. Do not fake multi-page with in-document tabs only.
 
 ## Styling
 
-- Use tokens from `03-your-product/ui-context.md`. No hardcoded hex in components.
-- Use Tailwind utilities in markup. Custom CSS is only for global reset and font faces.
-- Do not add colors or fonts outside the locked zinc, indigo, Geist Sans, and Geist Mono set.
-- Use the locked spacing: section `py-16` mobile and `py-24`/`py-32` desktop, container `max-w-7xl mx-auto px-6 md:px-12`, stacks `space-y-12`/`space-y-16`.
+- Use tokens from `03-your-product/ui-context.md`. No hardcoded hex in components (window dots use `--window-close`, `--window-min`, `--window-max`).
+- Use Tailwind utilities in markup. Custom CSS is only for global reset, font faces, and `:focus-visible`.
+- Do not add colors or fonts outside the locked obsidian / charcoal / hot / Geist set.
+- Use the locked spacing: 8-point grid, section `py-16` mobile and `py-24`/`py-32` desktop, container `max-w-7xl mx-auto px-6 md:px-12` (`max-w-4xl` allowed on Contact).
 - Style `:focus-visible` on every interactive control. Do not remove the focus ring.
+- Animate `transform` and `opacity` only.
 
 ## API
 
@@ -44,17 +46,18 @@
 
 ## Data
 
-- All projects, bio, skills, experience, and links live in `data/` as typed exported constants.
-- Placeholder project and experience rows are allowed until Raja replaces them. Mark them clearly in `data/` comments, not in the UI as "lorem".
+- All projects, bio, skills, experience, positioning, and links live in `data/` as typed exported constants.
+- Positioning is locked: `Building Applications That Scale Brands.`
+- Placeholder project and experience rows are allowed until Raja replaces them. Mark them clearly in `data/` comments, not in the UI as "lorem". Intended real titles (pending details): ThreatChain (FYP), Aura Gemstones.
 - The CV file is not in the repo. Store only the public Google Drive URL in `data/`.
 - Image paths live in `data/` or `public/` and render through `next/image`.
 - Do not add a database, ORM, or runtime store.
 
 ## File Organization
 
-- `app/` — routes, layouts, `globals.css`. Today: `layout.tsx` and `page.tsx` only. Composition only.
+- `app/` — routes, layouts, `globals.css`. Composition only. Routes: `/`, `/projects`, `/about`, `/contact`.
 - `data/` — typed content and shared interfaces in `data/index.ts`. Export `site`.
 - `components/` — UI sections and controls only. No content constants. Today: `theme-provider.tsx`, `theme-toggle.tsx`.
 - `lib/` — not in the tree yet. When added, motion variants and small pure helpers.
-- `public/` — not in the tree yet. When added, profile photo, project screenshots, favicon source.
+- `public/` — not in the tree yet. When added, project mockups, optional profile photo, favicon source.
 - Tailwind tokens live in `app/globals.css`. Do not add `tailwind.config.ts` unless the stack in `03-your-product/architecture.md` changes.

@@ -1,9 +1,5 @@
-import { site } from "@/data";
+import { Hero } from "@/components/hero";
 
 export default function HomePage() {
-  return (
-    <div className="py-16 md:py-24">
-      <h1 className="text-primary">{site.name}</h1>
-    </div>
-  );
+  return <Hero />;
 }

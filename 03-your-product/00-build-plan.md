@@ -16,44 +16,44 @@
 - Dependencies: `01-project-setup`
 - Status: Done
 
-### 03-hero-section
+### 03-home-page
 
-- Goal: Hero on the home page shows name, "Full Stack AI Web Apps Developer", priority profile photo, View Projects (scroll), and Download CV from `data/`.
-- Recipe: `03-your-product/03-hero-section.md`
+- Goal: Obsidian/charcoal tokens are the default dark canvas, `defaultTheme` is `dark`, root layout has route nav, the interaction score lives in the viewport, and `/` is the executive hook (display name, "Building Applications That Scale Brands.", window chrome, hot skill capsules, View Projects → `/projects`, Download CV).
+- Recipe: `03-your-product/03-home-page.md`
 - Dependencies: `01-project-setup`, `02-theme-and-layout`
+- Status: Done
+
+### 04-projects-page
+
+- Goal: `/projects` shows the featured cards in a high-density asymmetric grid with dark-mode mockups, hover scale inside the card, glowing border, tech badges, GitHub, and live demo links from `data/`.
+- Recipe: `03-your-product/04-projects-page.md`
+- Dependencies: `03-home-page`
 - Status: Pending
 
-### 04-about-and-experience
+### 05-about-page
 
-- Goal: About/Skills snapshot in Geist Mono and the Experience/Education list render from `data/`, including BSCS at NUML Islamabad 2026.
-- Recipe: `03-your-product/04-about-and-experience.md`
-- Dependencies: `01-project-setup`, `02-theme-and-layout`
+- Goal: `/about` presents bio and principles in terminal frames, a stack bento with Lucide glyphs, and Experience/Education from `data/`, including BSCS at NUML Islamabad 2026.
+- Recipe: `03-your-product/05-about-page.md`
+- Dependencies: `03-home-page`
 - Status: Pending
 
-### 05-projects-bento-grid
+### 06-contact-page
 
-- Goal: Projects section shows the featured cards in a responsive bento grid with screenshot, problem line, tags, GitHub, and live demo links from `data/`.
-- Recipe: `03-your-product/05-projects-bento-grid.md`
-- Dependencies: `01-project-setup`, `02-theme-and-layout`
+- Goal: `/contact` is a distraction-free conversion page: large header, darkspace, and direct `mailto:`, Google Drive CV, LinkedIn, GitHub, and dev.to from `data/`.
+- Recipe: `03-your-product/06-contact-page.md`
+- Dependencies: `03-home-page`
 - Status: Pending
 
-### 06-contact-section
+### 07-motion-and-transitions
 
-- Goal: Contact section exposes `mailto:`, Google Drive CV, LinkedIn, GitHub, and dev.to from `data/`.
-- Recipe: `03-your-product/06-contact-section.md`
-- Dependencies: `01-project-setup`, `02-theme-and-layout`
-- Status: Pending
-
-### 07-motion-and-interactions
-
-- Goal: Framer Motion staggered load, 20% scroll reveals, card hover scale, and `active:scale-95` run on the existing sections without layout shift.
-- Recipe: `03-your-product/07-motion-and-interactions.md`
-- Dependencies: `03-hero-section`, `04-about-and-experience`, `05-projects-bento-grid`, `06-contact-section`
+- Goal: Framer Motion spring route transitions keep the obsidian canvas persistent (no white flash), project-card hover scale and glow run without layout shift, and `active:scale-95` plus glowing link underlines are on the existing controls.
+- Recipe: `03-your-product/07-motion-and-transitions.md`
+- Dependencies: `03-home-page`, `04-projects-page`, `05-about-page`, `06-contact-page`
 - Status: Pending
 
 ### 08-seo-and-metadata
 
-- Goal: Home page ships custom 1200x630 Open Graph image via `@vercel/og`, indigo geometric favicon, and complete metadata exports.
+- Goal: Each route ships metadata; home ships a custom 1200x630 Open Graph image via `@vercel/og` on obsidian with the hot accent, plus a geometric favicon.
 - Recipe: `03-your-product/08-seo-and-metadata.md`
-- Dependencies: `02-theme-and-layout`
+- Dependencies: `03-home-page`
 - Status: Pending

@@ -1,32 +1,41 @@
 @import "tailwindcss";
 
 :root {
-  --bg-base: #fafafa;
-  --bg-surface: #ffffff;
-  --text-primary: #09090b;
-  --text-muted: #71717a;
-  --accent-primary: #6366f1;
-  --accent-muted: #e0e7ff;
-  --border-default: #e4e4e7;
-  --state-error: #ef4444;
-  --state-success: #22c55e;
+  --bg-base: #F5F5F0;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #EFECE6;
+  --text-primary: #0A0A0A;
+  --text-muted: #52525B;
+  --accent-primary: #E64500;
+  --accent-muted: #FFE8DC;
+  --border-default: #E5E5E5;
+  --state-error: #EF4444;
+  --state-success: #22C55E;
+  --window-close: #FF5F57;
+  --window-min: #FFBD2E;
+  --window-max: #28C840;
 }
 
 .dark {
-  --bg-base: #09090b;
-  --bg-surface: #18181b;
-  --text-primary: #fafafa;
-  --text-muted: #a1a1aa;
-  --accent-primary: #7c3aed;
-  --accent-muted: #312e81;
-  --border-default: #27272a;
-  --state-error: #f87171;
-  --state-success: #4ade80;
+  --bg-base: #0A0A0A;
+  --bg-surface: #141414;
+  --bg-elevated: #1A1A1A;
+  --text-primary: #FAFAFA;
+  --text-muted: #A1A1AA;
+  --accent-primary: #FF4D00;
+  --accent-muted: #3D1400;
+  --border-default: rgba(255, 255, 255, 0.08);
+  --state-error: #F87171;
+  --state-success: #4ADE80;
+  --window-close: #FF5F57;
+  --window-min: #FFBD2E;
+  --window-max: #28C840;
 }
 
 @theme inline {
   --color-base: var(--bg-base);
   --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
   --color-primary: var(--text-primary);
   --color-muted: var(--text-muted);
   --color-accent-primary: var(--accent-primary);
@@ -34,6 +43,9 @@
   --color-default: var(--border-default);
   --color-error: var(--state-error);
   --color-success: var(--state-success);
+  --color-window-close: var(--window-close);
+  --color-window-min: var(--window-min);
+  --color-window-max: var(--window-max);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

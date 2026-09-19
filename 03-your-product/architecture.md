@@ -14,22 +14,24 @@
 
 | Layer | Technology | Role |
 | --- | --- | --- |
-| Framework | Next.js 15.5.25 (App Router) | Pages, routing, static output for Vercel |
+| Framework | Next.js 15.5.25 (App Router) | Four static routes, layout chrome, Vercel output |
 | Language | TypeScript 5.9.3 (strict) | Types for components and the `data/` layer |
-| UI runtime | React 19.3.0 | UI |
+| UI runtime | React 19.3.0 | UI. Client islands only for theme, interaction score, and motion |
 | UI / styling | Tailwind CSS 4.3.3 via `@tailwindcss/postcss` 4.3.3 | Utilities and theme tokens in `app/globals.css` (`@theme inline`). No `tailwind.config.ts` |
-| Typography | Geist Sans + Geist Mono (`geist` 1.5.1, local files) | `--font-geist-sans` / `--font-geist-mono` mapped to `--font-sans` / `--font-mono` |
-| Icons | lucide-react 0.544.0 | Theme toggle uses Lucide `Sun` and `Moon` |
+| Typography | Geist Sans + Geist Mono (`geist` 1.5.1, local files) | Display and body = Geist Sans (black/bold for headers). Mono = terminal, metadata, commands. `--font-geist-*` mapped to `--font-sans` / `--font-mono` |
+| Icons | lucide-react 0.544.0 | Theme toggle, nav if needed, About stack glyphs. No third-party brand-icon pack |
 | Lint | ESLint 9.39.5 + eslint-config-next 15.5.25 | `npm run lint` runs `eslint`. Ignores `.next/`, `node_modules/`, `out/`, `next-env.d.ts` |
-| Theming | next-themes 0.4.6 | `attribute="class"`, `defaultTheme="system"`, `enableSystem`, `disableTransitionOnChange`. Job `02` |
-| Animation | Framer Motion | Not installed. Job `07-motion-and-interactions` |
-| Images | next/image | No images in the tree yet. Job `03` and `05` add files under `public/` |
+| Theming | next-themes 0.4.6 | `attribute="class"`, `defaultTheme="dark"`, `enableSystem`, `disableTransitionOnChange`. Persistent layout background. Job `03` switches default from system to dark |
+| Animation | Framer Motion | Not installed yet. Job `07-motion-and-transitions` adds spring route transitions and card hover. `active:scale-95` is CSS from job `03` |
+| Images | next/image | Project mockups under `public/`. Profile photo only if it lands in `data/` + `public/` for About |
 | Metadata | @vercel/og | Not installed. Job `08-seo-and-metadata` |
 | Auth | None | Public site, no sessions |
 | Database | None | No database in any environment |
-| Contact | `mailto:` | Client-side email only. Not rendered until job `06` |
+| Contact | `mailto:` | Client-side email only. Rendered on `/contact` in job `06` |
 | Host | Vercel | Static deploy and CDN |
 | Package name | `rajairfanahmed-portfolio` | `package.json` |
+
+Do not add WebGL, Three.js, Barba.js, `@tanstack/react-virtual`, or Embla unless this file is updated first.
 
 ## Host
 
@@ -44,12 +46,23 @@
 
 ## System Boundaries
 
-- `app/` — Exists. `layout.tsx`, `page.tsx`, `globals.css` only. No `app/api`, no `opengraph-image.tsx`, no `favicon.ico`.
+- `app/` — Exists. Today: `layout.tsx`, `page.tsx`, `globals.css`. Later: `projects/page.tsx`, `about/page.tsx`, `contact/page.tsx`. No `app/api`.
 - `data/` — Exists. `index.ts` is the typed content source (`site: SiteContent`).
-- `components/` — Exists. `theme-provider.tsx` and `theme-toggle.tsx` only.
-- `lib/` — Does not exist yet. Reserved for motion/theme helpers.
-- `public/` — Does not exist yet. Reserved for profile photo and project screenshots.
+- `components/` — Exists. `theme-provider.tsx` and `theme-toggle.tsx` today. Later: nav, hero, score, cards, terminal frames.
+- `lib/` — Does not exist yet. Reserved for motion variants and small pure helpers.
+- `public/` — Does not exist yet. Reserved for project mockups and optional profile photo.
 - No `src/` directory. Import alias `@/*` maps to the repo root.
+
+## Routes
+
+| Path | Page | Job |
+| --- | --- | --- |
+| `/` | Home — executive hook | `03-home-page` |
+| `/projects` | Projects — technical evidence | `04-projects-page` |
+| `/about` | About — terminal bio, stack bento, education | `05-about-page` |
+| `/contact` | Contact — conversion | `06-contact-page` |
+
+The root layout owns fonts, tokens, ThemeProvider, site nav, theme toggle, and the interaction score. Page files compose sections only.
 
 ## Storage Model
 
@@ -57,11 +70,12 @@
 - Local files: images in `public/`, optimized at build by `next/image`. No uploads.
 - External file: CV PDF on Google Drive, public anyone-with-the-link URL in `data/`. Not bundled.
 - Cache: Vercel CDN only. The app does not manage a cache.
+- Interaction score: React state in the browser only. Not written anywhere.
 
 ## Auth and Access Model
 
 - No sign-in, sessions, accounts, or roles. Every URL is public.
-- Every visitor sees the same content. Theme is the visitor's system preference or toggle.
+- Every visitor sees the same content. Theme is dark by default or the visitor's toggle.
 - The only external access rule is the Google Drive CV share setting: Anyone with the link can view.
 
 ## API floor
@@ -79,7 +93,8 @@
 1. No file under `app/` or `components/` may hardcode project details, bio, skills, or links. Read them from `data/`.
 2. Do not add a database, ORM, API route, or runtime data fetch. The site stays a static Vercel build.
 3. Do not add authentication, sessions, or gated pages.
-4. Theme must resolve before paint. No FOUC and no full-page color fade on first load.
+4. Theme must resolve before paint. No FOUC. Route changes must not flash a white document background.
 5. Contact stays `mailto:` unless this file is updated first. No Formspree, EmailJS, or form endpoint.
 6. Every image goes through `next/image`. Raw `<img>` is forbidden.
 7. Do not run models, inference, queues, or cron jobs inside this app.
+8. Do not persist visitor interaction counts off the device.
