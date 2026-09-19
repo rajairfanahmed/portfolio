@@ -3,7 +3,7 @@ import { TerminalFrame } from "@/components/terminal-frame";
 import { Code2, Database, Layout, Cpu, Terminal, Layers } from "lucide-react";
 
 export const metadata = {
-  title: `About | ${site.name}`,
+  title: "About",
   description: "Background, mindset, and technical stack.",
 };
 

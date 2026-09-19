@@ -2,7 +2,7 @@ import { site } from "@/data";
 import { Mail, Linkedin, Github, FileText, Terminal } from "lucide-react";
 
 export const metadata = {
-  title: `Contact | ${site.name}`,
+  title: "Contact",
   description: "Start a conversation.",
 };
 

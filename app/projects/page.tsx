@@ -2,7 +2,7 @@ import { site } from "@/data";
 import { ProjectCard } from "@/components/project-card";
 
 export const metadata = {
-  title: `Projects | ${site.name}`,
+  title: "Projects",
   description: "Featured technical projects and side pursuits.",
 };
 

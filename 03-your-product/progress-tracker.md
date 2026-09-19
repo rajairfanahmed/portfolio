@@ -17,14 +17,15 @@ Next job
 - Job `05-about-page` shipped on live Vercel URL
 - Job `06-contact-page` shipped on live Vercel URL
 - Job `07-motion-and-transitions` shipped on live Vercel URL
+- Job `08-seo-and-metadata` shipped on live Vercel URL
 
 ## In Progress
 
-- None. Job `07` is done. Waiting for `/develop` for `08-seo-and-metadata`.
+- ALL JOBS COMPLETE. The portfolio is 100% finished.
 
 ## Next Up
 
-- `/develop` `08-seo-and-metadata`
+- Celebrate! 🎉
 
 ## Open Questions
 

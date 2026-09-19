@@ -24,7 +24,7 @@
 | Theming | next-themes 0.4.6 | `attribute="class"`, `defaultTheme="dark"`, `enableSystem`, `disableTransitionOnChange`. Persistent layout background. Job `03` switches default from system to dark |
 | Animation | Framer Motion | Installed. Spring route transitions via `app/template.tsx` and hover scaling. `active:scale-95` is native CSS. |
 | Images | next/image | Project mockups under `public/`. Profile photo only if it lands in `data/` + `public/` for About |
-| Metadata | @vercel/og | Not installed. Job `08-seo-and-metadata` |
+| Metadata | next/og | Installed. Generates dynamic 1200x630 OG images and a 32x32 favicon via edge runtime. |
 | Auth | None | Public site, no sessions |
 | Database | None | No database in any environment |
 | Contact | `mailto:` | Client-side email only. Rendered on `/contact` in job `06` |

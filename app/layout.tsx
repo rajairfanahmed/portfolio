@@ -11,8 +11,31 @@ import { site } from "@/data";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: site.name,
+  metadataBase: new URL("https://rajairfanahmed.vercel.app"),
+  title: {
+    default: site.name,
+    template: `%s | ${site.name}`,
+  },
   description: site.positioning,
+  openGraph: {
+    title: {
+      default: site.name,
+      template: `%s | ${site.name}`,
+    },
+    description: site.positioning,
+    url: "https://rajairfanahmed.vercel.app",
+    siteName: site.name,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: {
+      default: site.name,
+      template: `%s | ${site.name}`,
+    },
+    description: site.positioning,
+  },
 };
 
 export default function RootLayout({

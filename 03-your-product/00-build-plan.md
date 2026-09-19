@@ -56,4 +56,4 @@
 - Goal: Each route ships metadata; home ships a custom 1200x630 Open Graph image via `@vercel/og` on obsidian with the hot accent, plus a geometric favicon.
 - Recipe: `03-your-product/08-seo-and-metadata.md`
 - Dependencies: `03-home-page`
-- Status: Pending
+- Status: Done
