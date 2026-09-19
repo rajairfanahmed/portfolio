@@ -16,7 +16,28 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Raja Irfan Ahmed | Full Stack AI Web Apps Developer",
-  description: "Portfolio of Raja Irfan Ahmed, Full Stack Developer specializing in AI Web Apps.",
+  description: "Portfolio of Raja Irfan Ahmed, Full Stack Developer specializing in AI Web Apps. Explore my projects, skills, and experience.",
+  openGraph: {
+    title: "Raja Irfan Ahmed | Full Stack AI Web Apps Developer",
+    description: "Portfolio of Raja Irfan Ahmed, Full Stack Developer specializing in AI Web Apps.",
+    url: "https://rajairfanahmed.com",
+    siteName: "Raja Irfan Ahmed Portfolio",
+    images: [
+      {
+        url: "https://github.com/rajairfanahmed.png",
+        width: 800,
+        height: 800,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Raja Irfan Ahmed | Full Stack AI Web Apps Developer",
+    description: "Portfolio of Raja Irfan Ahmed, Full Stack Developer specializing in AI Web Apps.",
+    images: ["https://github.com/rajairfanahmed.png"],
+  },
 };
 
 export default function RootLayout({
