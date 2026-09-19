@@ -6,7 +6,7 @@ Next job
 
 ## Current Goal
 
-`/architect` job `02-theme-and-dock`. Recipe file is not written yet.
+Push job `02-theme-and-dock` and confirm https://rajairfanahmed.vercel.app/ shows the glass dock. Do not start job `03`.
 
 ## Completed
 
@@ -28,7 +28,7 @@ Next job
 
 ## Next Up
 
-- `/architect` job `02-theme-and-dock`
+- Confirm live Vercel after push, then `/verify`
 
 ## Open Questions
 - Real project rows are not locked. Intended titles named by Raja: ThreatChain (FYP) and Aura Gemstones. Still needed before job `04`: problem line, tags, GitHub URL, live demo URL, mockup file, which card is flagship.
@@ -42,5 +42,5 @@ Next job
 
 - Job `01-project-scaffold` added `zod`, `@/lib/validations`, and a Zod-parsed `@/data` site object. Home and root layout are a boot proof only: no dock, theme toggle, or hero.
 - Leftover previous-plan routes (`/projects`, `/skills`, `/about`, `/contact`) were not restyled. Data field access was updated so `npm run build` stays green (`imageSrc`, `skill.name`).
-- Framer Motion is installed but not mounted. Dock and tokens are job `02`.
-- Live URL confirmed: heading Raja Irfan Ahmed, Geist Sans, zero nav/theme chrome, `GET /api` 404.
+- Framer Motion is mounted on the dock (`layoutId` pill, magnetic translate, theme icon fade). Page `AnimatePresence` is still job `03`.
+- Job `02-theme-and-dock` implemented locally. Obsidian/Bone tokens, glass dock (five routes, Resume, theme toggle, magnetic hover, `layoutId` pill). Lint, types, and `npm run build` are green. Not marked done until the Vercel URL is confirmed.

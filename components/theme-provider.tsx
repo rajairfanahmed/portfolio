@@ -8,7 +8,7 @@ interface ThemeProviderProps {
 }
 
 /**
- * Wraps the app so light/dark class tokens can resolve before paint.
+ * Resolves the `.dark` class before paint so token CSS does not flash.
  */
 export function ThemeProvider({ children }: ThemeProviderProps) {
   return (
