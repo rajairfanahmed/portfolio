@@ -46,11 +46,11 @@ Do not add WebGL, Three.js, Barba.js, `@tanstack/react-virtual`, or Embla unless
 
 ## System Boundaries
 
-- `app/` — Exists. Today: `layout.tsx`, `page.tsx`, `globals.css`. Later: `projects/page.tsx`, `about/page.tsx`, `contact/page.tsx`. No `app/api`.
+- `app/` — Exists. `layout.tsx`, `page.tsx`, `globals.css`, `projects/page.tsx`, `about/page.tsx`. Later: `contact/page.tsx`. No `app/api`.
 - `data/` — Exists. `index.ts` is the typed content source (`site: SiteContent`).
-- `components/` — Exists. `theme-provider.tsx` and `theme-toggle.tsx` today. Later: nav, hero, score, cards, terminal frames.
+- `components/` — Exists. `theme-provider.tsx`, `theme-toggle.tsx`, `site-nav.tsx`, `hero.tsx`, `interaction-score.tsx`, `project-card.tsx`, `terminal-frame.tsx`.
 - `lib/` — Does not exist yet. Reserved for motion variants and small pure helpers.
-- `public/` — Does not exist yet. Reserved for project mockups and optional profile photo.
+- `public/` — Exists. `projects/` for mockups. Optional profile photo later.
 - No `src/` directory. Import alias `@/*` maps to the repo root.
 
 ## Routes

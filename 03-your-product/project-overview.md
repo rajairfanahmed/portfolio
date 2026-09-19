@@ -41,7 +41,7 @@ This is a personal portfolio website for Raja Irfan Ahmed. It is a fully static 
 
 ### About (`/about`) — Developer's mindset
 
-- Biography and engineering principles inside stylized terminal frames (Geist Mono prompt from the GitHub handle, for example `rajairfanahmed@dev:~/portfolio $ cat philosophy.py`)
+- Biography and engineering principles inside stylized terminal frames (Geist Mono prompt from the GitHub handle, for example `rajairfanahmed@dev:~/portfolio $ cat bio.txt`)
 - Bento of stack badges with Lucide glyphs on charcoal cards
 - Alternating text blocks and visual stack grids
 - Experience/Education, including BSCS at National University of Modern Languages, Islamabad, 2026

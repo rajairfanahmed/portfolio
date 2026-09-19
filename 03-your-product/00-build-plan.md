@@ -35,7 +35,7 @@
 - Goal: `/about` presents bio and principles in terminal frames, a stack bento with Lucide glyphs, and Experience/Education from `data/`, including BSCS at NUML Islamabad 2026.
 - Recipe: `03-your-product/05-about-page.md`
 - Dependencies: `03-home-page`
-- Status: Pending
+- Status: Done
 
 ### 06-contact-page
 
