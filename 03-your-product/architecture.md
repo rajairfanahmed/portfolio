@@ -22,7 +22,7 @@
 | Icons | lucide-react 0.544.0 | Theme toggle, nav if needed, About stack glyphs. No third-party brand-icon pack |
 | Lint | ESLint 9.35.0 + eslint-config-next 15.5.3 | `npm run lint` runs `eslint`. Ignores `.next/`, `node_modules/`, `out/`, `next-env.d.ts` |
 | Theming | next-themes 0.4.6 | `attribute="class"`, `defaultTheme="dark"`, `enableSystem`, `disableTransitionOnChange`. Persistent layout background. Job `03` switches default from system to dark |
-| Animation | Framer Motion | Not installed yet. Job `07-motion-and-transitions` adds spring route transitions and card hover. `active:scale-95` is CSS from job `03` |
+| Animation | Framer Motion | Installed. Spring route transitions via `app/template.tsx` and hover scaling. `active:scale-95` is native CSS. |
 | Images | next/image | Project mockups under `public/`. Profile photo only if it lands in `data/` + `public/` for About |
 | Metadata | @vercel/og | Not installed. Job `08-seo-and-metadata` |
 | Auth | None | Public site, no sessions |

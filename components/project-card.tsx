@@ -15,7 +15,7 @@ export function ProjectCard({ project }: { project: Project }) {
           src={project.image}
           alt={`Screenshot of ${project.title}`}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
@@ -42,7 +42,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-[44px] min-w-[44px] items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-accent-primary active:scale-95"
+              className="flex min-h-[44px] min-w-[44px] items-center gap-2 text-sm font-medium text-primary transition-all hover:text-accent-primary active:scale-95"
               aria-label={`View ${project.title} source code on GitHub`}
             >
               <Github className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
@@ -52,7 +52,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-[44px] min-w-[44px] items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-accent-primary active:scale-95"
+              className="flex min-h-[44px] min-w-[44px] items-center gap-2 text-sm font-medium text-primary transition-all hover:text-accent-primary active:scale-95"
               aria-label={`View ${project.title} live demo`}
             >
               <ExternalLink className="h-5 w-5" strokeWidth={2} aria-hidden="true" />

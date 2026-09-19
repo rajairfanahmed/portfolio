@@ -37,7 +37,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               href="/projects"
-              className="flex min-h-[44px] items-center justify-center rounded-md bg-accent-primary px-8 font-medium text-white transition-transform active:scale-95"
+              className="flex min-h-[44px] items-center justify-center rounded-md bg-accent-primary px-8 font-medium text-white transition-all active:scale-95"
             >
               View Projects
             </Link>
@@ -45,7 +45,7 @@ export function Hero() {
               href={site.cvUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-[44px] items-center justify-center rounded-md border border-default bg-transparent px-8 font-medium text-primary transition-colors hover:border-accent-primary hover:text-accent-primary active:scale-95"
+              className="flex min-h-[44px] items-center justify-center rounded-md border border-default bg-transparent px-8 font-medium text-primary transition-all hover:border-accent-primary hover:text-accent-primary active:scale-95"
             >
               Download CV
             </a>

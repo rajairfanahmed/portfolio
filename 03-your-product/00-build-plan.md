@@ -49,7 +49,7 @@
 - Goal: Framer Motion spring route transitions keep the obsidian canvas persistent (no white flash), project-card hover scale and glow run without layout shift, and `active:scale-95` plus glowing link underlines are on the existing controls.
 - Recipe: `03-your-product/07-motion-and-transitions.md`
 - Dependencies: `03-home-page`, `04-projects-page`, `05-about-page`, `06-contact-page`
-- Status: Pending
+- Status: Done
 
 ### 08-seo-and-metadata
 

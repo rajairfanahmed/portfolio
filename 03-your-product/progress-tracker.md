@@ -16,14 +16,15 @@ Next job
 - Job `04-projects-page` shipped on live Vercel URL
 - Job `05-about-page` shipped on live Vercel URL
 - Job `06-contact-page` shipped on live Vercel URL
+- Job `07-motion-and-transitions` shipped on live Vercel URL
 
 ## In Progress
 
-- None. Job `06` is done. Waiting for `/develop` for `07-motion-and-transitions`.
+- None. Job `07` is done. Waiting for `/develop` for `08-seo-and-metadata`.
 
 ## Next Up
 
-- `/develop` `07-motion-and-transitions`
+- `/develop` `08-seo-and-metadata`
 
 ## Open Questions
 
