@@ -33,7 +33,7 @@ export interface Experience {
 export const bio = {
   name: "Raja Irfan Ahmed",
   positioningStatement: "Full Stack AI Web Apps Developer",
-  profilePhotoUrl: "/profile.jpg", // To be placed in public/
+  profilePhotoUrl: "https://github.com/rajairfanahmed.png", // GitHub avatar as placeholder
 };
 
 export const skills: string[] = [
