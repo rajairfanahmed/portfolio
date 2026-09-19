@@ -6,7 +6,7 @@ Next job
 
 ## Current Goal
 
-`/architect` job `03-home-page-and-transitions`. Do not start it until that command runs.
+`/verify` job `03-home-page-and-transitions` on https://rajairfanahmed.vercel.app/. Do not start job `04`.
 
 ## Completed
 
@@ -29,7 +29,7 @@ Next job
 
 ## Next Up
 
-- `/architect` job `03-home-page-and-transitions`
+- `/verify` job `03-home-page-and-transitions`
 
 ## Open Questions
 - Real project rows are not locked. Intended titles named by Raja: ThreatChain (FYP) and Aura Gemstones. Still needed before job `04`: problem line, tags, GitHub URL, live demo URL, mockup file, which card is flagship.
@@ -44,4 +44,6 @@ Next job
 - Job `01-project-scaffold` added `zod`, `@/lib/validations`, and a Zod-parsed `@/data` site object. Home and root layout are a boot proof only: no dock, theme toggle, or hero.
 - Leftover previous-plan routes (`/projects`, `/skills`, `/about`, `/contact`) were not restyled into later-job layouts. Job `02` only applies shared tokens and the dock.
 - Framer Motion is mounted on the dock (`layoutId` pill, magnetic translate, theme icon fade). Page `AnimatePresence` is still job `03`.
-- `/verify` passed on https://rajairfanahmed.vercel.app/ for job `02-theme-and-dock`. Dark body `rgb(5, 5, 6)` / `--bg-base: #050506`; light after toggle `rgb(252, 252, 253)` / `#fcfcfd`. Desktop dock `top: 24px` at 1280px; 375px screenshot shows the dock at the bottom. Active pill Home on `/`, Projects after click. Resume is `target="_blank" rel="noopener noreferrer"` to the Drive CV. `npm run build` green (Next.js 15.5.25). No `app/api`. Recipe `03-home-page-and-transitions.md` is not written yet.
+- `/verify` passed on https://rajairfanahmed.vercel.app/ for job `02-theme-and-dock`.
+- Recipe written: `03-your-product/03-home-page-and-transitions.md`. Home’s five overview sections plus `AnimatePresence mode="wait"`. Copy stays on `@/data` placeholders. Leftover `/projects` body and `Cmd+K` are out of this job.
+- Job `03` implemented locally: Home hero, selected-work bento, timeline snapshot, current focus, Contact conversion, page cross-fade wrapper. Removed leftover `hero.tsx`, `interaction-score.tsx`, `transition-wrapper.tsx`, and unused `portfolio-kit.svg`. Leftover `/projects`, `/skills`, `/about`, `/contact` still load. Not marked done until `/verify` on Vercel.

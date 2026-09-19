@@ -3,6 +3,7 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
 import { FloatingDock } from "@/components/floating-dock";
+import { PageTransition } from "@/components/page-transition";
 import { ThemeProvider } from "@/components/theme-provider";
 import { site } from "@/data";
 
@@ -32,7 +33,7 @@ export default function RootLayout({
         <ThemeProvider>
           <FloatingDock />
           <main className="px-4 pb-28 pt-8 md:px-8 md:pb-12 md:pt-28">
-            {children}
+            <PageTransition>{children}</PageTransition>
           </main>
         </ThemeProvider>
       </body>
