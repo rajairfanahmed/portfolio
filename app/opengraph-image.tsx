@@ -59,7 +59,7 @@ export default function Image() {
           <div style={{ display: "flex", gap: "24px", marginTop: "48px", flexWrap: "wrap" }}>
             {site.skills.slice(0, 4).map((skill) => (
               <div
-                key={skill}
+                key={skill.name}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -72,7 +72,7 @@ export default function Image() {
                   fontWeight: 700,
                 }}
               >
-                {skill}
+                {skill.name}
               </div>
             ))}
           </div>

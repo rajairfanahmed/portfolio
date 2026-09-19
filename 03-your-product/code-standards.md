@@ -1,63 +1,47 @@
 # Code Standards
 
 ## General
-
-- Keep each component to one section or one reusable control.
-- Fix the root cause. Do not hide a layout or type error with a workaround.
-- Do not hardcode site copy in `app/` or `components/`. Read it from `data/`.
-- Do not add a package for something Next.js, Tailwind, Framer Motion, or `next-themes` already does.
-- Do not commit unused components or dead exports.
-- Do not invent product behavior. If a fact is missing, stop and record it in `03-your-product/progress-tracker.md`.
+- Write clean, readable, and maintainable code with a strict separation of concerns between data, structure, and styling.
+- Enforce WCAG 2.2 AA accessibility standards across the entire application, ensuring every interactive element has explicit ARIA labels and focus states.
+- Guarantee zero Cumulative Layout Shift (CLS) by hardcoding aspect ratios for media and pre-allocating dimensions for dynamic grid layouts.
+- Design mobile-first, ensuring fluid container scaling down to 320px and maintaining a minimum 44x44px touch target for all interactive UI elements.
+- Optimize explicitly for a 90+ Lighthouse score by avoiding heavy synchronous scripts and deferring non-critical execution.
 
 ## Language
-
-- TypeScript strict mode stays on. Do not weaken `tsconfig.json`.
-- Use `interface` for component props and data shapes (`Project`, `ExperienceItem`, `EducationItem`, `SiteContent`). Skills are `string[]` on `SiteContent`, not a `SkillTag` type.
-- Use `type` for unions, intersections, and utility compositions.
-- Do not use `any`. Use `unknown` and narrow before use.
-- Define each shared data shape once in `data/` and import it. Do not duplicate the shape.
+- Use strict TypeScript for all application code, configuration files, and data structures.
+- Enable `strict: true` in `tsconfig.json` and strictly prohibit the use of `any` or `@ts-ignore` overrides.
+- Define all component props, API payloads, and internal data structures using explicit TypeScript interfaces or type aliases.
+- Utilize modern ES6+ syntax, preferring functional paradigms, optional chaining, and nullish coalescing over legacy control flow.
 
 ## Framework
-
-- Default to Server Components. Add `"use client"` only for state, effects, handlers, Framer Motion, the theme toggle, or the interaction score.
-- Do not fetch site content at runtime. Import `data/` at build time.
-- Do not create `app/api` routes.
-- Use Next.js metadata files and `metadata` exports. Do not inject raw `<meta>` tags by hand.
-- Use `next/image` for every image. Raw `<img>` is forbidden.
-- Use named exports for UI in `components/`. Default exports only for Next.js `page` and `layout` files.
-- Route between `/`, `/projects`, `/about`, and `/contact` with `next/link`. Do not fake multi-page with in-document tabs only.
+- Use Next.js 15 App Router and enforce React Server Components (RSC) as the default for all layouts and pages.
+- Restrict the `"use client"` directive exclusively to leaf components that require React state, lifecycle hooks, or Framer Motion physics.
+- Implement `<AnimatePresence mode="wait">` at the root layout boundary to facilitate seamless cross-route layout morphing without white flashes.
+- Serve all raster and vector media using the `next/image` component to enforce automatic WebP/AVIF optimization and strict dimensions.
+- Use granular Suspense boundaries wrapped around interactive data tables or heavy UI nodes instead of blocking the entire route with a loading spinner.
 
 ## Styling
-
-- Use tokens from `03-your-product/ui-context.md`. No hardcoded hex in components (window dots use `--window-close`, `--window-min`, `--window-max`).
-- Use Tailwind utilities in markup. Custom CSS is only for global reset, font faces, and `:focus-visible`.
-- Do not add colors or fonts outside the locked obsidian / charcoal / hot / Geist set.
-- Use the locked spacing: 8-point grid, section `py-16` mobile and `py-24`/`py-32` desktop, container `max-w-7xl mx-auto px-6 md:px-12` (`max-w-4xl` allowed on Contact).
-- Style `:focus-visible` on every interactive control. Do not remove the focus ring.
-- Animate `transform` and `opacity` only.
+- Use Tailwind CSS v4 utility classes exclusively to style all UI components and layouts.
+- Map all color assignments to the semantic CSS variables defined in `app/globals.css` (e.g., `bg-[var(--bg-surface)]`); never hardcode hex values in component files.
+- Apply `tabular-nums` to all dynamic metrics, pagination counters, and dates to prevent horizontal font jitter.
+- Render motion exclusively via Framer Motion spring physics (`mass: 0.8, stiffness: 250, damping: 24`) targeting composited properties like `transform` and `opacity`.
+- Construct spatial depth by utilizing a dual-border technique (`box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.1), 0 0 0 1px rgba(255,255,255,0.05)`) on all elevated cards and the floating dock.
 
 ## API
-
-- Follow the API floor in `03-your-product/architecture.md`.
-- Do not add Server Actions, route handlers, or form posts unless architecture is updated first.
-- Contact is `mailto:` only. Do not add Formspree, EmailJS, or a submit endpoint.
-- If a Server Action is later approved, validate at the boundary, return a typed error envelope, and never leak stack traces.
-- Never commit secrets. This app has no env var names today.
+- Operate entirely statically; do not execute external data fetches at runtime that block the initial HTML stream.
+- Ensure any utility Route Handlers (`app/api/...`) strictly utilize the Vercel Edge runtime for sub-50ms execution.
+- Validate all incoming edge request parameters, query strings, and payloads using Zod schemas prior to processing.
+- Rely on standard RFC 6068 `mailto:` URIs for contact interactions rather than deploying server-side form submission endpoints.
+- Apply hardened security headers (`X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: strict-origin-when-cross-origin`) to all edge responses.
 
 ## Data
-
-- All projects, bio, skills, experience, positioning, and links live in `data/` as typed exported constants.
-- Positioning is locked: `Building Applications That Scale Brands.`
-- Placeholder project and experience rows are allowed until Raja replaces them. Mark them clearly in `data/` comments, not in the UI as "lorem". Intended real titles (pending details): ThreatChain (FYP), Aura Gemstones.
-- The CV file is not in the repo. Store only the public Google Drive URL in `data/`.
-- Image paths live in `data/` or `public/` and render through `next/image`.
-- Do not add a database, ORM, or runtime store.
+- Centralize all portfolio records (projects, skills, academic history) within a dedicated `@/data` directory as localized TypeScript files.
+- Construct datasets as immutable constants typed strictly against exported interfaces (e.g., `export const projects: Project[] = [...]`).
+- Pre-structure high-density data matrices (such as the skills list) to immediately support tabular rendering or offset-based pagination in the UI layer.
+- Enforce build-time failures if static data records violate required schema shapes (e.g., missing repository URLs or live demo links).
 
 ## File Organization
-
-- `app/` — routes, layouts, `globals.css`. Composition only. Routes: `/`, `/projects`, `/about`, `/contact`.
-- `data/` — typed content and shared interfaces in `data/index.ts`. Export `site`.
-- `components/` — UI sections and controls only. No content constants. Today: `theme-provider.tsx`, `theme-toggle.tsx`.
-- `lib/` — not in the tree yet. When added, motion variants and small pure helpers.
-- `public/` — not in the tree yet. When added, project mockups, optional profile photo, favicon source.
-- Tailwind tokens live in `app/globals.css`. Do not add `tailwind.config.ts` unless the stack in `03-your-product/architecture.md` changes.
+- Dedicate the `app/` directory solely to Next.js file-system routing, layout definitions, and page shells.
+- House all modular UI primitives, complex client components, and layout fragments (like the floating dock) in the root `@/components` directory.
+- Maintain a strict `@/lib` folder for shared utilities, Zod schema validations, and framework configuration functions (like Tailwind `cn` mergers).
+- Store all public-facing static assets, fonts, and Open Graph base images exclusively within the `public/` directory.

@@ -1,95 +1,61 @@
 # Raja Irfan Ahmed Portfolio
 
 ## Overview
+A multi-page, premium realistic developer portfolio for Raja Irfan Ahmed. Designed with an elite, spatial aesthetic, it features high-fidelity physics-based animations, deep dark and light modes, and seamless page transitions. The site acts as a comprehensive showcase of full-stack engineering capabilities, prioritizing a 90+ Lighthouse score, robust SEO metadata, and clear, recruiter-ready conversion paths across five dedicated routes.
 
-This is a personal portfolio website for Raja Irfan Ahmed. It is a fully static Next.js App Router site with no backend, no database, and no authentication. It exists so recruiters and hiring managers can judge real work quickly across five public routes: Home (executive hook), Projects (technical evidence), Skills (production capabilities), About (engineering mindset), and Contact (clean conversion). The visual system is a layered cinematic 2026 dark mode featuring spatial depth, milled borders, and a floating dynamic dock. Unrelated content stays off the site so the pitch stays single-identity.
+**Short Description:** A premium 2026 multi-page developer portfolio showcasing full-stack AI web applications with high-fidelity Framer animations, spatial UI design, and an integrated experience timeline.  
+**Tags:** Portfolio, Next.js, Framer Motion, Tailwind CSS, Full-Stack, AI Web Apps, UI/UX
 
 ## Goals
-
-1. Present Raja Irfan Ahmed through one positioning line: "Building Applications That Scale Brands."
-2. Get recruiters to open real project proof (GitHub and live demo) as the primary evidence of skill.
-3. Convert interest into contact (email, CV, LinkedIn, GitHub, or dev.to), with project quality as the driver rather than a contact form.
-4. Load fast and score well on Core Web Vitals (90+), ensuring premium physics do not degrade Lighthouse scores.
-5. Make the visual system itself evidence of frontend competence: spatial depth, hardware-accelerated spring physics, magnetic cursor glows, and zero layout shifts.
+1. Establish a premium, modern engineering brand identity for Raja Irfan Ahmed.
+2. Achieve 90+ Lighthouse scores across Performance, Accessibility, Best Practices, and SEO.
+3. Convert visitors into professional connections via direct email and social links.
+4. Deliver a tactile, latency-free user experience utilizing high-end, spring-based micro-interactions.
+5. Organize comprehensive professional data across distinct, easily navigable pages while surfacing critical timeline data immediately on the landing page.
 
 ## Core User Flow
-
-1. Recruiter lands on `/` and sees Raja Irfan Ahmed's name in massive typography freed from a box, window-chrome framing, hot skill capsules, a "Selected Work" preview, and a "Current Focus" section.
-2. Recruiter navigates using the floating dynamic dock to `/projects` and reviews featured work in an asymmetrical 12-column grid with interactive 1px milled borders and magnetic glows.
-3. Recruiter opens `/skills` to browse a high-density data table/command palette of production-ready tools.
-4. Recruiter optionally opens `/about` to read the IDE-themed bio and scroll down a glowing vertical timeline for education (BSCS, NUML Islamabad, 2026).
-5. Recruiter opens `/contact` to a 2x2 bento grid of tactile action cards featuring a live PKT timezone clock and a glowing "Status: Available" indicator, taking the primary action.
+1. Visitor lands on the Home page, experiencing a high-impact animated Hero section, viewing a preview of 2 flagship projects, scanning a brief Experience & Education timeline, and reading the "Current Focus" summary.
+2. Visitor uses the floating dynamic navbar to navigate to the `/projects` page for a complete gallery of work, interacting with GitHub and Live Demo links (which securely open in new tabs).
+3. Visitor explores the `/skills` page to review categorized technical competencies in a structured, high-density layout.
+4. Visitor navigates to the `/about` page to read the deeper professional narrative.
+5. Visitor clicks the "Resume" button in the navbar to instantly access the CV in a new tab, or navigates to `/contact` to reach out via email, LinkedIn, or GitHub.
 
 ## Features
-
-### Global Navigation & Layout Architecture
-- Centered, glassmorphic floating dynamic dock (`backdrop-blur-xl`, `bg-white/5`). Top-6 desktop, bottom-6 mobile.
-- Active Route Morphing via Framer Motion `layoutId` pill gliding smoothly behind the active route name.
-- Seamless page transitions wrapping `<main>` in `<AnimatePresence mode="wait">` to prevent white flashes.
-
-### Home (`/`) — Executive hook
-- Name in massive ultra-bold grotesque type (Geist Black), directly on the background.
-- "Selected Work" bento preview showing two flagship projects.
-- "Current Focus" section highlighting ongoing full-stack AI web app development.
-- Viewport interaction score in a corner.
-
-### Projects (`/projects`) — Technical evidence
-- 12-column asymmetrical grid.
-- Top 60% of cards house an edge-to-edge high-fidelity UI mockup (or shimmering skeleton).
-- Bottom 40% houses title, description, and tabular-nums/monospace tech tags.
-- Hover: Inner image scales (`1.02`) inside an `overflow-hidden` container to avoid layout shifts, and the card's 1px border illuminates with a magnetic cursor glow.
-
-### Skills (`/skills`) — Production capabilities
-- High-density interactive data table or command-palette interface.
-- Tools logically grouped (Frontend, Backend, AI Integrations).
-- Subtle progress bars or "Production Ready" status indicators next to core competencies.
-
-### About (`/about`) — Developer's mindset
-- Modern IDE theme (VS Code or Zed style) for the bio with proper syntax highlighting.
-- Glowing, vertical scroll-linked timeline for Experience and Education.
-
-### Contact (`/contact`) — Clean conversion
-- 2x2 bento grid of large, tactile action cards (Email, GitHub, LinkedIn, CV).
-- Glowing green "Status: Available" indicator.
-- Live PKT timezone clock for spatial grounding.
-
-### Theming & Spatial Depth
-- Dark mode base: Obsidian `#050506`. Elevated cards on deep charcoal `#0A0A0C`.
-- Light mode base: Bone `#FCFCFD`. Pure white `#FFFFFF` cards elevated by a 4% opacity drop shadow.
-- 1px Milled Borders: `box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.1), 0 0 0 1px rgba(255,255,255,0.05)`.
-- Typography: Massive, tightly-tracked grotesque (Geist Black) for headers. Monospace (Geist Mono) for technical tags.
-
-### Premium 2026 Motion Physics
-- Framer Motion spring physics override linear easing (`mass: 0.8, stiffness: 250, damping: 24`).
-- Tactile depressions: `active:scale-95` on every button, link, and interactive card.
-- Hardware Acceleration: Animating only GPU-composited properties (`transform`, `opacity`).
-- Magnetic cursor glows: Radial gradient tracking `usePointer`, strictly masked within the 1px card border.
-
-### Accessibility & Performance
-- Zero CLS: Hardcode aspect ratios for all images and grids.
-- Keyboard Supremacy: Strict 2px Electric Indigo (`#6366f1`) `:focus-visible` outline.
-- Skeletons over spinners for hydration and loading.
+*   **Global Navigation:** A floating, glassmorphic dock navbar containing links to Home, Projects, Skills, About, Contact, and a prominent Resume button. Includes a fluid Dark/Light theme toggle utilizing Framer Motion for a smooth, premium modern visual shift.
+*   **Global Link Behavior:** Every external link, including GitHub repositories, Live Demos, social profiles, and the Resume, strictly opens in a new tab.
+*   **Home Page (5 Sections):**
+    *   *Hero:* Massive typography, animated entrance, and primary value proposition.
+    *   *Selected Work:* A bento-grid preview of the top 2 flagship projects.
+    *   *Experience & Education Snapshot:* A sleek, scroll-linked timeline highlighting the BSCS at NUML (2026) and current full-stack developer roles directly on the landing page for immediate recruiter visibility.
+    *   *Current Focus:* A short, punchy text block detailing current engineering interests.
+    *   *Quick Conversion:* A visually striking call-to-action routing users to the Contact page.
+*   **Projects Page:** An asymmetric bento grid of project cards. Each card includes a high-fidelity image mockup, project title, a short one-line description, tech stack tags, a GitHub button, and a Live Demo button.
+*   **Skills Page:** A dedicated, high-density display of technical skills grouped by category (e.g., Frontend, Backend, Architecture) utilizing interactive data-viz elements or a command-palette style list.
+*   **About Page:** A narrative professional biography expanding on the developer's mindset, architecture philosophy, and background.
+*   **Contact Page:** A high-conversion, distraction-free grid layout featuring direct links to Email (`rajairfana551@gmail.com`), LinkedIn (`/rajairfanahmed`), GitHub (`/rajairfanahmed`), and dev.to (`/rajairfanahmed`).
+*   **SEO & Metadata:** Custom Open Graph images, canonical URLs, and descriptive meta tags mapped to every individual route.
 
 ## Scope
 
 ### In Scope
-- Fully static public site, five App Router routes: `/`, `/projects`, `/skills`, `/about`, `/contact`
-- Hardcoded project and content data
-- Cinematic dark default plus a light paper/bone theme
-- Floating dynamic dock with `layoutId` pill
-- Framer Motion spring physics, magnetic glows, and scroll-linked timelines
-- Custom OG image, favicon, and per-route metadata
+*   5 distinct static pages (`/`, `/projects`, `/skills`, `/about`, `/contact`).
+*   Dark and Light mode support with zero flash of unstyled content and fluid animated theme transitions.
+*   High-fidelity animations and micro-interactions (hover scales, magnetic cursor tracking, page cross-fades).
+*   Hardcoded, static data structures for projects, skills, and the experience timeline.
+*   Direct `mailto:` routing and external social linking.
+*   All external links and document viewers explicitly configured to open in new tabs (`target="_blank" rel="noopener noreferrer"`).
 
 ### Out of Scope
-- Backend, database, or any app-owned storage
-- User accounts or login
-- Contact form services
-- Quora and Linktree links
-- Persisting the interaction score on a server
+*   Backend database, ORM, or CMS integration.
+*   User authentication or admin login portals.
+*   Server-side processing for contact forms (no SendGrid, Resend, or form submission APIs).
+*   Blog posting, Markdown article rendering, or comment sections.
+*   E-commerce or payment gateways.
 
 ## Success Criteria
-1. The live site is a static Next.js deploy on Vercel with no backend or database dependency.
-2. Floating dock, layoutId pill, and AnimatePresence cross-fades work perfectly at 60fps.
-3. Every interactive control reacts with `active:scale-95` and shows an Electric Indigo outline on Tab focus.
-4. Project cards showcase magnetic glows without shifting the layout on hover.
-5. Lighthouse/PageSpeed scores 90 or above for Performance, Accessibility, Best Practices, and SEO.
+1. The site renders flawlessly across mobile, tablet, and desktop viewports, successfully hiding complex desktop interactions (like command-palette keyboard shortcuts) behind accessible touch-friendly UI on mobile devices.
+2. Google Lighthouse scores for Performance, Accessibility, Best Practices, and SEO are all 90 or above on both mobile and desktop.
+3. The site successfully deploys with 5 distinct, independently accessible URL routes.
+4. Clicking the Resume button, GitHub links, Live Demos, and social profiles exclusively opens them in new browser tabs securely.
+5. The Home page successfully integrates and renders the Experience & Education timeline snapshot without disrupting the bento grid flow.
+6. Dark and light themes toggle smoothly using premium Framer animations without breaking the UI, maintaining WCAG 2.2 AA contrast ratios in both modes.

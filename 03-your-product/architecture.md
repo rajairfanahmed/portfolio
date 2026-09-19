@@ -2,100 +2,53 @@
 
 ## Backend levels
 
-- Shape: Portfolio / content
-- API: Server Actions (unused at runtime; reserved Next.js default only)
-- Data: None
-- Auth: None
-- Runtime: Next.js on Vercel
-- Reliability: Simple CRUD (static typed constants in `data/`, not a database), no database required for this project
+- Runtime: Next.js on Vercel (Static Export / Edge caching)
+- API: None (Static generation, `mailto:` only)
+- Data: None (Local static TypeScript data structures)
+- Auth: None (Fully public portfolio)
+- Reliability: 100% Static CDN delivery
 - AI layer: None
 
 ## Stack
 
 | Layer | Technology | Role |
 | --- | --- | --- |
-| Framework | Next.js 15.5.3 (App Router) | Four static routes, layout chrome, Vercel output |
-| Language | TypeScript 5.9.2 (strict) | Types for components and the `data/` layer |
-| UI runtime | React 19.1.1 | UI. Client islands only for theme, interaction score, and motion |
-| UI / styling | Tailwind CSS 4.1.13 via `@tailwindcss/postcss` 4.1.13 | Utilities and theme tokens in `app/globals.css` (`@theme inline`). No `tailwind.config.ts` |
-| Typography | Geist Sans + Geist Mono (`geist` 1.5.1, local files) | Display and body = Geist Sans (black/bold for headers). Mono = terminal, metadata, commands. `--font-geist-*` mapped to `--font-sans` / `--font-mono` |
-| Icons | lucide-react 0.544.0 | Theme toggle, nav if needed, About stack glyphs. No third-party brand-icon pack |
-| Lint | ESLint 9.35.0 + eslint-config-next 15.5.3 | `npm run lint` runs `eslint`. Ignores `.next/`, `node_modules/`, `out/`, `next-env.d.ts` |
-| Theming | next-themes 0.4.6 | `attribute="class"`, `defaultTheme="dark"`, `enableSystem`, `disableTransitionOnChange`. Persistent layout background. Job `03` switches default from system to dark |
-| Animation | Framer Motion | Installed. Spring route transitions via `components/transition-wrapper.tsx` wrapping `<main>` in `app/layout.tsx`. `active:scale-95` is native CSS. |
-| Images | next/image | Project mockups under `public/`. Profile photo only if it lands in `data/` + `public/` for About |
-| Metadata | next/og | Installed. Generates dynamic 1200x630 OG images and a 32x32 favicon via edge runtime. |
-| Auth | None | Public site, no sessions |
-| Database | None | No database in any environment |
-| Contact | `mailto:` | Client-side email only. Rendered on `/contact` in job `06` |
-| Host | Vercel | Static deploy and CDN |
-| Package name | `rajairfanahmed-portfolio` | `package.json` |
-
-Do not add WebGL, Three.js, Barba.js, `@tanstack/react-virtual`, or Embla unless this file is updated first.
+| Framework | Next.js 15 App Router | React framework, routing, Server Components, static generation |
+| Language | TypeScript | Compile-time type safety, static data interfaces |
+| Styling | Tailwind CSS v4 | Utility-first styling system |
+| Motion | Framer Motion | Physics-based animations, layout morphing, route transitions |
+| Hosting | Vercel | Global CDN, static asset delivery, continuous integration |
 
 ## Host
 
-- Platform: Vercel
+- Provider: Vercel
+- Project folder name: `rajairfanahmed`
 - Project URL: https://rajairfanahmed.vercel.app/
-- GitHub: https://github.com/rajairfanahmed/portfolio
-- Build command: `npm run build`
-- Dev command: `npm run dev`
-- Start command: `npm run start`
-- Lint command: `npm run lint`
-- Env names (not values): none. This static site does not read secrets.
+- Github URL: https://github.com/rajairfanahmed/portfolio
+- Environment variables: None required for core build
 
 ## System Boundaries
 
-- `app/` — Exists. `layout.tsx`, `page.tsx`, `globals.css`, `projects/page.tsx`, `skills/page.tsx`, `about/page.tsx`, `contact/page.tsx`. No `app/api`.
-- `data/` — Exists. `index.ts` is the typed content source (`site: SiteContent`).
-- `components/` — Exists. `floating-dock.tsx`, `hero.tsx`, `interaction-score.tsx`, `project-card.tsx`, `terminal-frame.tsx`, `theme-provider.tsx`, `theme-toggle.tsx`, `transition-wrapper.tsx`.
-- `lib/` — Exists. Contains `motion.ts` and small pure helpers.
-- `public/` — Exists. `projects/` for mockups. Optional profile photo later.
-- No `src/` directory. Import alias `@/*` maps to the repo root.
-
-## Routes
-
-| Path | Page | Job |
-| --- | --- | --- |
-| `/` | Home — executive hook | `03-home-page`, `11-home-expansion` |
-| `/projects` | Projects — technical evidence | `04-projects-page`, `12-projects-upgrade` |
-| `/skills` | Skills — production capabilities | `13-skills-route` |
-| `/about` | About — IDE bio, scroll-linked timeline | `05-about-page`, `14-about-timeline` |
-| `/contact` | Contact — 2x2 conversion bento, live clock | `06-contact-page`, `15-contact-bento` |
-
-The root layout owns fonts, tokens, ThemeProvider, site nav, theme toggle, and the interaction score. Page files compose sections only.
+The application is a standalone, purely static web frontend. It does not communicate with any owned backend services or databases at runtime. External boundaries consist entirely of outbound hyperlinks opening in new browser tabs (GitHub, LinkedIn, Dev.to, Google Drive for the CV). Contact flow delegates immediately to the user's local operating system via a secure `mailto:` URI scheme. 
 
 ## Storage Model
 
-- Database: none in any environment.
-- Local files: images in `public/`, optimized at build by `next/image`. No uploads.
-- External file: CV PDF on Google Drive, public anyone-with-the-link URL in `data/`. Not bundled.
-- Cache: Vercel CDN only. The app does not manage a cache.
-- Interaction score: React state in the browser only. Not written anywhere.
+There is no database, CMS, or object storage service. All content—including project details, skills matrices, and experience timelines—is stored within the repository in a strictly typed `@/data` directory as immutable TypeScript files. Asset storage (images) relies on the `public/` directory and is optimized during the Next.js build process.
 
 ## Auth and Access Model
 
-- No sign-in, sessions, accounts, or roles. Every URL is public.
-- Every visitor sees the same content. Theme is dark by default or the visitor's toggle.
-- The only external access rule is the Google Drive CV share setting: Anyone with the link can view.
+The portfolio is entirely public. There is no authentication, authorization, session management, or gated content. 
 
 ## API floor
 
-- There are no runtime list endpoints. If a Server Action or route that returns a list is ever added, it must paginate. No unbounded dumps.
-- If a Server Action or route is ever added, return a typed error envelope. Never send stack traces to the browser.
-- There are no writes today. If a write is added, authorize it at the boundary before it runs.
-- If any input is accepted later, validate it at the Server Action or route boundary before use.
-- There are no payments or webhooks. If either is added, require idempotency keys.
-- Never commit secrets. Env lives on Vercel. This app currently needs no env vars.
-- `npm run build` in this file is the build command of record.
+- Zero Runtime APIs: The application must not rely on external APIs fetching data at runtime. All data must be statically compiled during the build step.
+- Immutability: No client-side mutations, form submissions, or database writes are permitted.
+- Secure External Routing: All external links must enforce `target="_blank"` and `rel="noopener noreferrer"`.
+- Edge Compliance: If dynamic utility routes (such as Open Graph image generation) are introduced, they must strictly utilize the Vercel Edge runtime and return responses under 50ms.
 
 ## Invariants
 
-1. No file under `app/` or `components/` may hardcode project details, bio, skills, or links. Read them from `data/`.
-2. Do not add a database, ORM, API route, or runtime data fetch. The site stays a static Vercel build.
-3. Do not add authentication, sessions, or gated pages.
-4. Theme must resolve before paint. No FOUC. Route changes must not flash a white document background.
-5. Contact stays `mailto:` unless this file is updated first. No Formspree, EmailJS, or form endpoint.
-6. Every image goes through `next/image`. Raw `<img>` is forbidden.
-7. Do not run models, inference, queues, or cron jobs inside this app.
-8. Do not persist visitor interaction counts off the device.
+- The application must never introduce a runtime database (e.g., PostgreSQL, MongoDB, Prisma).
+- The application must never include heavy server-side Node.js dependencies that break Edge or Static export compatibility.
+- The build process (`npm run build`) must strictly enforce TypeScript types and never complete successfully if type errors or missing data schemas exist.
+- The architecture must never require private environment variables to successfully boot the public production build.

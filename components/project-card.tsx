@@ -12,7 +12,7 @@ export function ProjectCard({ project }: { project: Project }) {
       {/* Edge-to-edge mockup with inner scale on hover */}
       <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-default bg-elevated">
         <Image
-          src={project.image}
+          src={project.imageSrc}
           alt={`Screenshot of ${project.title}`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"

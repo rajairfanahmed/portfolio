@@ -1,5 +1,5 @@
-import { Hero } from "@/components/hero";
+import { site } from "@/data";
 
 export default function HomePage() {
-  return <Hero />;
+  return <h1>{site.name}</h1>;
 }

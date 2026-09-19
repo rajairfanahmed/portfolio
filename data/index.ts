@@ -1,57 +1,41 @@
-export interface Project {
-  title: string;
-  description: string;
-  tags: string[];
-  githubUrl: string;
-  demoUrl: string;
-  image: string;
-  flagship: boolean;
-}
+import { siteContentSchema } from "@/lib/validations";
 
-export interface ExperienceItem {
-  title: string;
-  org: string;
-  dates: string;
-  summary: string;
-}
+export type {
+  EducationItem,
+  ExperienceItem,
+  Project,
+  SiteContent,
+  Skill,
+} from "@/lib/validations";
 
-export interface EducationItem {
-  title: string;
-  org: string;
-  dates: string;
-}
-
-export interface SiteContent {
-  name: string;
-  positioning: string;
-  bio: string;
-  skills: string[];
-  projects: Project[];
-  experience: ExperienceItem[];
-  education: EducationItem[];
-  email: string;
-  linkedinUrl: string;
-  githubUrl: string;
-  devtoUrl: string;
-  cvUrl: string;
-}
-
-export const site: SiteContent = {
+export const site = siteContentSchema.parse({
   name: "Raja Irfan Ahmed",
   positioning: "Building Applications That Scale Brands.",
   // Placeholder until Raja replaces this bio.
   bio: "I build full stack AI web apps with a focus on speed, clear architecture, and recruiter-ready proof of work.",
+  // Placeholder until Raja replaces current focus.
+  currentFocus:
+    "Full stack AI web apps with a focus on speed and clear architecture.",
   // Placeholder skill list until Raja replaces it.
   skills: [
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "React",
-    "Node.js",
-    "PostgreSQL",
-    "AI integrations",
+    { name: "Next.js", category: "Frontend", indicator: "Production Ready" },
+    { name: "TypeScript", category: "Frontend", indicator: "Production Ready" },
+    {
+      name: "Tailwind CSS",
+      category: "Frontend",
+      indicator: "Production Ready",
+    },
+    { name: "React", category: "Frontend", indicator: "Production Ready" },
+    { name: "Node.js", category: "Backend", indicator: "Production Ready" },
+    { name: "PostgreSQL", category: "Backend", indicator: "Production Ready" },
+    {
+      name: "AI integrations",
+      category: "Architecture",
+      indicator: "Production Ready",
+    },
   ],
-  // Placeholder projects until Raja replaces them with ThreatChain (FYP), Aura Gemstones, and any other locked titles. image files land in job 04.
+  // Placeholder projects until Raja replaces problem lines, tags, and URLs.
+  // imageSrc files land in a later job.
   projects: [
     {
       title: "ThreatChain (FYP)",
@@ -59,7 +43,7 @@ export const site: SiteContent = {
       tags: ["Next.js", "Solidity", "TypeScript", "Tailwind"],
       githubUrl: "https://github.com/rajairfanahmed",
       demoUrl: "https://rajairfanahmed.vercel.app/",
-      image: "/projects/threatchain.svg",
+      imageSrc: "/projects/threatchain.svg",
       flagship: true,
     },
     {
@@ -68,17 +52,8 @@ export const site: SiteContent = {
       tags: ["React", "PostgreSQL", "Stripe"],
       githubUrl: "https://github.com/rajairfanahmed",
       demoUrl: "https://rajairfanahmed.vercel.app/",
-      image: "/projects/aura-gemstones.svg",
-      flagship: false,
-    },
-    {
-      title: "Portfolio Kit",
-      description: "A static bento-grid kit for developer portfolios.",
-      tags: ["Next.js", "Tailwind CSS", "TypeScript"],
-      githubUrl: "https://github.com/rajairfanahmed",
-      demoUrl: "https://rajairfanahmed.vercel.app/",
-      image: "/projects/portfolio-kit.svg",
-      flagship: false,
+      imageSrc: "/projects/aura-gemstones.svg",
+      flagship: true,
     },
   ],
   // Placeholder experience until Raja replaces it.
@@ -103,4 +78,4 @@ export const site: SiteContent = {
   devtoUrl: "https://dev.to/rajairfanahmed",
   cvUrl:
     "https://drive.google.com/file/d/1CRblzPL3j8W6mv06d6FzW-zujSwqs9tN/view?usp=drive_link",
-};
+});

@@ -25,10 +25,10 @@ export function Hero() {
           <div className="mt-4 flex flex-wrap gap-2">
             {site.skills.map((skill) => (
               <span
-                key={skill}
+                key={skill.name}
                 className="flex min-h-[32px] items-center rounded-md bg-accent-primary/10 px-3 py-1 text-sm font-semibold text-accent-primary"
               >
-                {skill}
+                {skill.name}
               </span>
             ))}
           </div>
