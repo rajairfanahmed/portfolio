@@ -20,7 +20,7 @@ Next job
 
 ## Next Up
 
-- Wait for the user to run `/verify` on `03` or `/develop` `04-projects-page`.
+- `/develop` `04-projects-page`
 
 ## Open Questions
 

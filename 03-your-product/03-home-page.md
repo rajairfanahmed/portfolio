@@ -39,17 +39,17 @@
 
 # Verify when done
 
-- [ ] https://rajairfanahmed.vercel.app/ is dark obsidian (`#0A0A0A` / `rgb(10, 10, 10)`), not zinc `#FAFAFA`, unless the visitor toggled light
-- [ ] The main heading is Raja Irfan Ahmed in large bold type and the line reads Building Applications That Scale Brands.
-- [ ] A window frame with red/yellow/green dots sits on the hero (decorative, not three extra buttons in Tab order)
-- [ ] Hot capsules show skills from `data/`
-- [ ] View Projects goes to `/projects` (thin heading is enough this job)
-- [ ] Download CV still opens the locked Google Drive URL
-- [ ] Nav lists Home, Projects, About, Contact. Theme toggle still works
-- [ ] The interaction score changes on click, scroll, or hover and does not appear as a form
-- [ ] Tab reaches nav, CTAs, toggle, and shows a visible focus ring
-- [ ] CTAs are at least 44×44px
-- [ ] No project cards, terminal bio, or contact-form layout on `/`
-- [ ] `npm run build` passes
-- [ ] UX floor that applies: keyboard path and visible focus; 44px targets; both themes use the locked tokens; score is live but optional; no new form; no second token set
-- [ ] API floor that applies: no list endpoint; no secrets; score is not stored on a server; build command is `npm run build`
+- [x] https://rajairfanahmed.vercel.app/ is dark obsidian (`#0A0A0A` / `rgb(10, 10, 10)`), not zinc `#FAFAFA`, unless the visitor toggled light
+- [x] The main heading is Raja Irfan Ahmed in large bold type and the line reads Building Applications That Scale Brands.
+- [x] A window frame with red/yellow/green dots sits on the hero (decorative, not three extra buttons in Tab order)
+- [x] Hot capsules show skills from `data/`
+- [x] View Projects goes to `/projects` (thin heading is enough this job)
+- [x] Download CV still opens the locked Google Drive URL
+- [x] Nav lists Home, Projects, About, Contact. Theme toggle still works
+- [x] The interaction score changes on click, scroll, or hover and does not appear as a form
+- [x] Tab reaches nav, CTAs, toggle, and shows a visible focus ring
+- [x] CTAs are at least 44×44px
+- [x] No project cards, terminal bio, or contact-form layout on `/`
+- [x] `npm run build` passes
+- [x] UX floor that applies: keyboard path and visible focus; 44px targets; both themes use the locked tokens; score is live but optional; no new form; no second token set
+- [x] API floor that applies: no list endpoint; no secrets; score is not stored on a server; build command is `npm run build`

@@ -34,14 +34,14 @@
 
 # Verify when done
 
-- [ ] https://rajairfanahmed.vercel.app/ still shows only the name heading from `data/` (no Hero CTAs, project cards, or Say Hello)
-- [ ] A Sun or Moon button is fixed in the top-right corner
-- [ ] Clicking it switches light ↔ dark instantly with no full-page fade
-- [ ] Light background is `#FAFAFA` / `rgb(250, 250, 250)` and dark is `#09090B` / `rgb(9, 9, 11)`
-- [ ] Reload in each theme does not flash the opposite theme (no FOUC)
-- [ ] Tab reaches the toggle and shows a visible focus ring
-- [ ] The control is at least 44×44px
-- [ ] Content sits in `max-w-7xl` with `px-6 md:px-12` (not full-bleed to the viewport edge)
-- [ ] `npm run build` passes
-- [ ] UX floor that applies: keyboard path and visible focus; 44px target; both themes use the locked tokens; no new form; no second token set
-- [ ] API floor that applies: no list endpoint; no secrets; build command is `npm run build`
+- [x] https://rajairfanahmed.vercel.app/ still shows only the name heading from `data/` (no Hero CTAs, project cards, or Say Hello)
+- [x] A Sun or Moon button is fixed in the top-right corner
+- [x] Clicking it switches light ↔ dark instantly with no full-page fade
+- [x] Light background is `#FAFAFA` / `rgb(250, 250, 250)` and dark is `#09090B` / `rgb(9, 9, 11)`
+- [x] Reload in each theme does not flash the opposite theme (no FOUC)
+- [x] Tab reaches the toggle and shows a visible focus ring
+- [x] The control is at least 44×44px
+- [x] Content sits in `max-w-7xl` with `px-6 md:px-12` (not full-bleed to the viewport edge)
+- [x] `npm run build` passes
+- [x] UX floor that applies: keyboard path and visible focus; 44px target; both themes use the locked tokens; no new form; no second token set
+- [x] API floor that applies: no list endpoint; no secrets; build command is `npm run build`
